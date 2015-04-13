@@ -13,6 +13,8 @@
 		EB4A56521ADC511F008F05F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4A56511ADC511F008F05F1 /* Images.xcassets */; };
 		EB4A56551ADC511F008F05F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4A56531ADC511F008F05F1 /* LaunchScreen.xib */; };
 		EB4A56611ADC511F008F05F1 /* RepFacilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A56601ADC511F008F05F1 /* RepFacilTests.swift */; };
+		EB4A566B1ADC5152008F05F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A566A1ADC5152008F05F1 /* Person.swift */; };
+		EB4A566F1ADC5247008F05F1 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A566E1ADC5247008F05F1 /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		EB4A565A1ADC511F008F05F1 /* RepFacilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepFacilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4A565F1ADC511F008F05F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4A56601ADC511F008F05F1 /* RepFacilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepFacilTests.swift; sourceTree = "<group>"; };
+		EB4A566A1ADC5152008F05F1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		EB4A566E1ADC5247008F05F1 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +81,9 @@
 		EB4A56471ADC511F008F05F1 /* RepFacil */ = {
 			isa = PBXGroup;
 			children = (
+				EB4A566D1ADC5169008F05F1 /* View */,
+				EB4A566C1ADC5159008F05F1 /* Model */,
 				EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */,
-				EB4A564C1ADC511F008F05F1 /* ViewController.swift */,
 				EB4A564E1ADC511F008F05F1 /* Main.storyboard */,
 				EB4A56511ADC511F008F05F1 /* Images.xcassets */,
 				EB4A56531ADC511F008F05F1 /* LaunchScreen.xib */,
@@ -110,6 +115,23 @@
 				EB4A565F1ADC511F008F05F1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB4A566C1ADC5159008F05F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EB4A566A1ADC5152008F05F1 /* Person.swift */,
+				EB4A566E1ADC5247008F05F1 /* Room.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EB4A566D1ADC5169008F05F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB4A564C1ADC511F008F05F1 /* ViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +183,7 @@
 				TargetAttributes = {
 					EB4A56441ADC511F008F05F1 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = AN2448FN23;
 					};
 					EB4A56591ADC511F008F05F1 = {
 						CreatedOnToolsVersion = 6.3;
@@ -212,7 +235,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4A566B1ADC5152008F05F1 /* Person.swift in Sources */,
 				EB4A564D1ADC511F008F05F1 /* ViewController.swift in Sources */,
+				EB4A566F1ADC5247008F05F1 /* Room.swift in Sources */,
 				EB4A564B1ADC511F008F05F1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +367,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RepFacil/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -352,7 +379,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RepFacil/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
