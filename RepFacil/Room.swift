@@ -9,9 +9,16 @@
 import UIKit
 
 class Room: NSObject {
-   
-    var owners : [Person] = []
-    var rent : Double = 0.0
+    
+    var id : Int
+    private(set) var owners : [Person]
+    var rent : Double
+    
+    init(id : Int = 0, rent : Double = 0) {
+        self.id = id
+        self.rent = rent
+        self.owners = []
+    }
     
     func addOwner (newOwner : Person) {
         owners.append(newOwner)
