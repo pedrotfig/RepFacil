@@ -60,22 +60,15 @@ class ExpensesViewController: UIViewController {
     }
     
 //    func tableView(tableExpense cellForRowAtIndexPath: UITableView, indexPath: NSIndexPath) -> UITableViewCell{
-//        var identifier: NSString = "cellExpense"
 //        
-//        cellNewExpense: cellExpense = table
-//        return
+//        var cell : CellExpense = tableExpense.dequeueReusableCellWithIdentifier("cellExpense")
+//        
+//        
+//        cell.labelName.text = expenses[indexPath.row].getName()
+//        cell.labelPrice.text = String(stringInterpolationSegment: expenses[indexPath.row].getExpensive())
+//        
+//        return cell
 //    }
  
-    
-
-//    func tableView(tableExpense commitEditingStyle: UITableView, editingStyle forRowAtIndexPath: UITableViewCellEditingStyle, indexPath: NSIndexPath) {
-//        
-//        if (editingStyle == UITableViewCellEditingStyleDelete) {
-//            
-//        }else
-//            if (editingStyle == UITableViewCellEditingStyleInsert) {
-//                
-//            }
-//    }
     
 }
