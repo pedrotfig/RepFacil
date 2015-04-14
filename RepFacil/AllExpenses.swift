@@ -26,6 +26,6 @@ class AllExpenses: NSObject {
     }
     
     func resultExpenses (expenses: Expenses, person: Person)-> Double{
-        return eachExpenses(expenses) + person.room!.getIndividualRent()
+        return eachExpenses(expenses) + person.room.getIndividualRent()
     }
 }
