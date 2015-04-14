@@ -1,5 +1,5 @@
 //
-//  Contas.swift
+//  Expenses.swift
 //  RepFacil
 //
 //  Created by Jessica Oliveira on 13/04/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-@objc class Contas: NSObject {
+@objc class Expenses: NSObject {
 
     private(set) var nameAccount: String = ""
     
