@@ -10,7 +10,6 @@ import UIKit
 
 class AllExpenses: NSObject {
     
-    var person : [Person] = []
     
     func totalExpenses (expenses: [Expenses]) -> Double {
         var total: Double = 0
@@ -20,11 +19,11 @@ class AllExpenses: NSObject {
         return total
     }
     
-    func eachExpenses (expenses: [Expenses]) -> Double {
-        return totalExpenses(expenses) / Double(self.person.count)
+    func eachExpenses (expense expenses: [Expenses], andPerson person: [Person]) -> Double {
+        return totalExpenses(expenses) / Double(person.count)
     }
     
-    func resultExpenses (expenses: [Expenses], person: Person)-> Double{
-        return eachExpenses(expenses) + person.room!.getIndividualRent()
+    func resultExpenses (expenses: Expenses, person : [Person] , individualPerson: Person) -> Double{
+        return eachExpenses(expense: expenses, andPerson: person) + individualPerson.room.getIndividualRent()
     }
 }

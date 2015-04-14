@@ -26,4 +26,16 @@ struct SharedData {
             }
         }
     }
+    
+    static func peopleCount () -> Int {
+        var totalOfPeople : Int
+        totalOfPeople = 0
+        for room in rooms {
+            for person in room.owners {
+                totalOfPeople++
+            }
+        }
+        
+        return totalOfPeople
+    }
 }
