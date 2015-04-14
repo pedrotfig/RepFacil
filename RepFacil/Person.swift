@@ -9,5 +9,17 @@
 import UIKit
 
 class Person: NSObject {
-   
+    
+    var name : String
+    var room : Room?
+    
+    init(name : String = "", roomId : Int) {
+        self.name = name
+        self.room = nil
+        for room in SharedData.rooms {
+            if roomId == room.id {
+                self.room = room
+            }
+        }
+    }
 }
