@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C24A962E1ADD3AB3006C68EF /* AllExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */; };
 		C2950FA01ADC57C8005448E6 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2950F9F1ADC57C8005448E6 /* Expenses.swift */; };
+		C2D71D641ADD6874000D9AC6 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */; };
 		EB4A564B1ADC511F008F05F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */; };
 		EB4A564D1ADC511F008F05F1 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */; };
 		EB4A56501ADC511F008F05F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A564E1ADC511F008F05F1 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExpenses.swift; sourceTree = "<group>"; };
 		C2950F9F1ADC57C8005448E6 /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		EB4A56451ADC511F008F05F1 /* RepFacil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepFacil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4A56491ADC511F008F05F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */,
 				EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */,
+				C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				EB4A564B1ADC511F008F05F1 /* AppDelegate.swift in Sources */,
 				EB4A56711ADC5E31008F05F1 /* SharedData.swift in Sources */,
 				C24A962E1ADD3AB3006C68EF /* AllExpenses.swift in Sources */,
+				C2D71D641ADD6874000D9AC6 /* ExpensesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
