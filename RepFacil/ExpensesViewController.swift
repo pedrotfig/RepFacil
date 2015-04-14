@@ -14,28 +14,17 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var nameExpense: UITextField!
     @IBOutlet weak var priceExpense: UITextField!
     @IBOutlet var expenses : [Expenses] = []
+    @IBOutlet weak var tableExpense: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        expenses.append(Expenses(nameAccount: "Light", expensive: 100))
+    }
     
-        expenses.append(Expenses(nameAccount: "Light", expensive: 123))
-        expenses.append(Expenses(nameAccount: "Internet", expensive: 100))
-        expenses.append(Expenses(nameAccount: "Buys", expensive: 150))
-        expenses.append(Expenses(nameAccount: "Water", expensive: 56))
-    
-    
-        var all : AllExpenses = AllExpenses()
-    
-        println("individual expense \(all.eachExpenses(expenses, person: SharedData.peopleList()))")
-    
-        for person in SharedData.peopleList() {
-            var individualExpense: Double = person.room.getIndividualRent() + all.eachExpenses(expenses, person: SharedData.peopleList())
-    
-            println("\(person.name) pays \(individualExpense)")
-    
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     
@@ -47,7 +36,22 @@ class ExpensesViewController: UIViewController {
             for i in 0..<(expenses.count) {
                 println("Expense: \(expenses[i].getName()) -> cost: \(expenses[i].getExpensive())")
             }
+            tableExpense.reloadData()
+            nameExpense.text = ""
+            priceExpense.text = ""
+            
+            var all : AllExpenses = AllExpenses()
+            
+            println("individual expense \(all.eachExpenses(expenses, person: SharedData.peopleList()))")
+            
+            for person in SharedData.peopleList() {
+                var individualExpense: Double = person.room.getIndividualRent() + all.eachExpenses(expenses, person: SharedData.peopleList())
+                
+                println("\(person.name) pays \(individualExpense)")
+                
+            }
         }
+        
     }
     
 }
