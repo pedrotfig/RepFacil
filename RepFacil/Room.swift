@@ -22,13 +22,13 @@ class Room: NSObject {
         self.owners = []
     }
     
-    func addOwner (name : String) {
+    func addOwner (named name : String) {
         self.owners.append(Person(id: SharedData.nextPersonId, name: name, room: self))
         SharedData.nextPersonId++
     }
     
     func removeOwner (owner : Person) {
-        for var i = 0; i < self.owners.count; i++ {
+        for i in 0 ..< self.owners.count {
             if self.owners[i].id == owner.id {
                 self.owners.removeAtIndex(i)
             }

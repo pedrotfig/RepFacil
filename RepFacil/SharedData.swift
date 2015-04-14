@@ -14,13 +14,13 @@ struct SharedData {
     
     static var rooms : [Room] = []
     
-    static func addRoom (name : String, rent : Double) {
+    static func addRoom (named name : String, withRent rent : Double) {
         rooms.append(Room(id: nextPersonId, name: name, rent: rent))
         nextRoomId++
     }
     
     static func removeRoom (room : Room) {
-        for var i = 0; i < rooms.count; i++ {
+        for i in 0 ..< rooms.count {
             if room.id == rooms[i].id {
                 rooms.removeAtIndex(i)
             }
