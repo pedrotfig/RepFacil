@@ -10,19 +10,21 @@ import UIKit
 
 class ExpensesViewController: UIViewController {
 
+
+    @IBOutlet weak var nameExpense: UITextField!
+    @IBOutlet weak var priceExpense: UITextField!
+    @IBOutlet var expenses : [Expenses] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var expenses : [Expenses] = []
+
     
         expenses.append(Expenses(nameAccount: "Light", expensive: 123))
         expenses.append(Expenses(nameAccount: "Internet", expensive: 100))
         expenses.append(Expenses(nameAccount: "Buys", expensive: 150))
         expenses.append(Expenses(nameAccount: "Water", expensive: 56))
     
-        for i in 0..<4 {
-            println("Expense: \(expenses[i].getName()) -> cost: \(expenses[i].getExpensive())")
-        }
     
         var all : AllExpenses = AllExpenses()
     
@@ -35,7 +37,17 @@ class ExpensesViewController: UIViewController {
     
         }
     }
+    
+    
     @IBAction func saveExpense(sender: AnyObject) {
-        
+        if(!(nameExpense.text.isEmpty) && !(priceExpense.text.isEmpty)){
+            
+            expenses.append(Expenses(nameAccount: nameExpense.text, expensive: Double((priceExpense.text).toInt()!)))
+            
+            for i in 0..<(expenses.count) {
+                println("Expense: \(expenses[i].getName()) -> cost: \(expenses[i].getExpensive())")
+            }
+        }
     }
+    
 }
