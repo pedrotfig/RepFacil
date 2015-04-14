@@ -16,8 +16,12 @@ struct SharedData {
         rooms.append(room)
     }
     
-    static func removeRoom (roomId : Int) {
-        rooms.removeAtIndex(roomId)
+    static func removeRoom (room : Room) {
+        for var i = 0; i < rooms.count; i++ {
+            if room.id == rooms[i].id {
+                rooms.removeAtIndex(i)
+            }
+        }
     }
     
     static func addPerson (person : Person) {
@@ -30,8 +34,8 @@ struct SharedData {
                 people.removeAtIndex(i)
                 for var j = 0; j < rooms.count; j++ {
                     if let room = person.room {
-                        if room.id == rooms[j] {
-                            
+                        if room.id == rooms[j].id {
+                            room.removeOwner(person)
                         }
                     }
                 }

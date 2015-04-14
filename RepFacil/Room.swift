@@ -26,8 +26,12 @@ class Room: NSObject {
         self.owners.append(newOwner)
     }
     
-    func removeOwner (ownerId : Int) {
-        self.owners.removeAtIndex(ownerId)
+    func removeOwner (owner : Person) {
+        for var i = 0; i < self.owners.count; i++ {
+            if self.owners[i].id == owner.id {
+                self.owners.removeAtIndex(i)
+            }
+        }
     }
     
     func getIndividualRent () -> Double {
