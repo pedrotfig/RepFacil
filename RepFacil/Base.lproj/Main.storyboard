@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lOS-He-mOB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="aPE-yK-NkJ">
-            <objects>
-                <viewController id="qec-cg-6f6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lvo-H5-Fgk"/>
-                        <viewControllerLayoutGuide type="bottom" id="De6-Id-uvA"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ezZ-3G-CZZ">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="02J-xl-BSl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V8S-2O-1gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-262.5" y="1065.75"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MvY-2Q-oAh">
             <objects>
@@ -33,7 +15,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qec-cg-6f6" kind="relationship" relationship="viewControllers" id="BYD-7n-tha"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WFi-eH-oSY"/>
                     </connections>
                 </tabBarController>
@@ -58,18 +39,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="27" y="72" width="344" height="30"/>
+                                    <rect key="frame" x="27" y="84" width="344" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejH-6G-O7D">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="27" y="126" width="10" height="21"/>
-                                </variation>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RoomTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Whu-xr-0a6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,10 +84,13 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dqF-He-ZXv" kind="show" id="CVN-Xz-uiJ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="180" width="400" height="620"/>
+                                    <rect key="frame" x="0.0" y="226" width="400" height="574"/>
                                 </variation>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aRe-cv-Oks">
@@ -124,7 +99,7 @@
                                     <navigationItem title="Rooms" id="4xP-4X-32R"/>
                                 </items>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="-1" y="0.0" width="400" height="44"/>
+                                    <rect key="frame" x="-1" y="6" width="400" height="44"/>
                                 </variation>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rent" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqu-zv-MIn">
@@ -132,27 +107,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="50" y="122" width="97" height="30"/>
+                                    <rect key="frame" x="50" y="126" width="97" height="30"/>
                                 </variation>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdU-we-qRI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="325" y="135" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejH-6G-O7D">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="130" width="10" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="bbu-SZ-yOp"/>
-                                <exclude reference="ejH-6G-O7D"/>
                                 <exclude reference="Whu-xr-0a6"/>
                                 <exclude reference="aRe-cv-Oks"/>
                                 <exclude reference="Jqu-zv-MIn"/>
+                                <exclude reference="UdU-we-qRI"/>
+                                <exclude reference="ejH-6G-O7D"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="bbu-SZ-yOp"/>
-                                <include reference="ejH-6G-O7D"/>
                                 <include reference="Whu-xr-0a6"/>
                                 <include reference="aRe-cv-Oks"/>
                                 <include reference="Jqu-zv-MIn"/>
+                                <include reference="UdU-we-qRI"/>
+                                <include reference="ejH-6G-O7D"/>
                             </mask>
                         </variation>
                     </view>
@@ -161,6 +156,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="244.5" y="234"/>
+        </scene>
+        <!--Room Editing View Controller-->
+        <scene sceneID="DJV-fo-KtG">
+            <objects>
+                <viewController id="dqF-He-ZXv" userLabel="Room Editing View Controller" customClass="RoomEditingViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c2F-gN-HPV"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Ta-UM-Gh2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TcI-hm-fjM">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="9LL-A4-ksg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4TG-vj-28P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
 </document>
