@@ -54,4 +54,28 @@ class ExpensesViewController: UIViewController {
         
     }
     
+    func tableView(tableExpense numberOfRowsInSection: UITableView, section: Int) -> Int {
+        
+        return expenses.count
+    }
+    
+//    func tableView(tableExpense cellForRowAtIndexPath: UITableView, indexPath: NSIndexPath) -> UITableViewCell{
+//        var identifier: NSString = "cellExpense"
+//        
+//        cellNewExpense: cellExpense = table
+//        return
+//    }
+ 
+    
+
+//    func tableView(tableExpense commitEditingStyle: UITableView, editingStyle forRowAtIndexPath: UITableViewCellEditingStyle, indexPath: NSIndexPath) {
+//        
+//        if (editingStyle == UITableViewCellEditingStyleDelete) {
+//            
+//        }else
+//            if (editingStyle == UITableViewCellEditingStyleInsert) {
+//                
+//            }
+//    }
+    
 }
