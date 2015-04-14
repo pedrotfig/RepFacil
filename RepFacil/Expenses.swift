@@ -14,6 +14,17 @@ import UIKit
     
     private(set) var expensive: Double = 0
     
+    init(nameAccount : String, expensive : Double) {
+        self.nameAccount = nameAccount
+        self.expensive = expensive
+    }
+    
+    func addExpense(name: String, cost: Double){
+        
+        setName(name)
+        newExpensive(cost)
+    }
+    
     func setName(newAccount: String){
         self.nameAccount = newAccount
     }

@@ -16,6 +16,22 @@ class ViewController: UIViewController {
         
         SharedData.addRoom(Room(id: 0, name: "Room 1", rent: 700.0))
         
+        var expenses : [Expenses] = []
+        
+        expenses.append(Expenses(nameAccount: "Light", expensive: 123))
+        expenses.append(Expenses(nameAccount: "Internet", expensive: 100))
+        expenses.append(Expenses(nameAccount: "Buys", expensive: 150))
+        expenses.append(Expenses(nameAccount: "Water", expensive: 56))
+
+        for i in 0..<4 {
+            println("Expense: \(expenses[i].getName()) -> cost: \(expenses[i].getExpensive())")
+        }
+        
+        var all : AllExpenses = AllExpenses()
+        
+        println("Total Expenses: \(all.totalExpenses(expenses))")
+
+        
     }
 
     override func didReceiveMemoryWarning() {
