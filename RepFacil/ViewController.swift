@@ -14,7 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        SharedData.addRoom(Room(id: 0, name: "Room 1", rent: 700.0))
+        //SharedData.addRoom(Room(name: "Room 1", rent: 800.0))
         
     }
 
