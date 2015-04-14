@@ -19,11 +19,11 @@ class AllExpenses: NSObject {
         return total
     }
     
-    func eachExpenses (expense expenses: [Expenses], andPerson person: [Person]) -> Double {
+    func eachExpenses ( expenses: [Expenses],  person: [Person]) -> Double {
         return totalExpenses(expenses) / Double(person.count)
     }
     
-    func resultExpenses (expenses: Expenses, person : [Person] , individualPerson: Person) -> Double{
-        return eachExpenses(expense: expenses, andPerson: person) + individualPerson.room.getIndividualRent()
-    }
+//    func resultExpenses (expenses: Expenses, persons : [Person] , individualPerson: Person) -> Double{
+//        return eachExpenses(expenses, person: persons)
+//    }
 }

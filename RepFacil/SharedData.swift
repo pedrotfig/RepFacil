@@ -38,4 +38,16 @@ struct SharedData {
         
         return totalOfPeople
     }
+    
+    static func peopleList () -> [Person] {
+        var peopleArray : [Person]
+        peopleArray = []
+        for room in rooms {
+            for person in room.owners {
+                peopleArray.append(person)
+            }
+        }
+        
+        return peopleArray
+    }
 }

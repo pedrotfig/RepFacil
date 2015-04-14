@@ -33,8 +33,15 @@ class ViewController: UIViewController {
         
         var all : AllExpenses = AllExpenses()
         
-        println("Total Expenses: \(all.totalExpenses(expenses))")
+        println("individual expense \(all.eachExpenses(expenses, person: SharedData.peopleList()))")
+        
+        for person in SharedData.peopleList() {
+            var individualExpense: Double = person.room.getIndividualRent() + all.eachExpenses(expenses, person: SharedData.peopleList())
+            
+            println("\(person.name) pays \(individualExpense)")
 
+        }
+        
         
     }
 
