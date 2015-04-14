@@ -10,10 +10,12 @@ import UIKit
 
 class Person: NSObject {
     
+    var id : Int
     var name : String
     var room : Room?
     
-    init(name : String = "", roomId : Int) {
+    init(id : Int, name : String = "", roomId : Int) {
+        self.id = id
         self.name = name
         self.room = nil
         for room in SharedData.rooms {

@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        SharedData.addRoom(Room(id: 0, name: "Room 1", rent: 700.0))
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -11,17 +11,27 @@ import UIKit
 class Room: NSObject {
     
     var id : Int
+    var name : String
     private(set) var owners : [Person]
     var rent : Double
     
-    init(id : Int = 0, rent : Double = 0) {
+    init(id : Int = 0, name : String = "", rent : Double = 0) {
         self.id = id
+        self.name = name
         self.rent = rent
         self.owners = []
     }
     
     func addOwner (newOwner : Person) {
-        owners.append(newOwner)
+        self.owners.append(newOwner)
+    }
+    
+    func removeOwner (ownerId : Int) {
+        self.owners.removeAtIndex(ownerId)
+    }
+    
+    func getIndividualRent () -> Double {
+        return self.rent/Double(self.owners.count)
     }
     
 }
