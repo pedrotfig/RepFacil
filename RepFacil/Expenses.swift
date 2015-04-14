@@ -14,7 +14,7 @@ import UIKit
     
     private(set) var expensive: Double = 0
     
-    func setName(newAccount: String = "Luz"){
+    func setName(newAccount: String){
         self.nameAccount = newAccount
     }
     
@@ -22,7 +22,7 @@ import UIKit
         return self.nameAccount
     }
     
-    func setExpensive(newExpensive: Double = 100){
+    func newExpensive(newExpensive: Double){
         self.expensive = newExpensive
     }
     
