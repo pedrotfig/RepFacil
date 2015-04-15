@@ -18,6 +18,8 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
 
         // Do any additional setup after loading the view.
         
+        self.title = "Owners"
+        
         SharedData.rooms[0].addOwner(named: "Jéssica")
         SharedData.rooms[1].addOwner(named: "Sophia")
         SharedData.rooms[1].addOwner(named: "Lúcia")

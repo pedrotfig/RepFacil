@@ -19,6 +19,8 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Expenses"
+        
 //        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
 //        view.addGestureRecognizer(tap)
     
