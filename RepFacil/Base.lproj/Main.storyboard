@@ -19,6 +19,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="WFi-eH-oSY"/>
                         <segue destination="hNq-BE-jvq" kind="relationship" relationship="viewControllers" id="fKh-3w-tVa"/>
+                        <segue destination="oQM-30-pzX" kind="relationship" relationship="viewControllers" id="hcg-kr-SMR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHs-mw-koS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,7 +98,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Room name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bbu-SZ-yOp">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Y7f-ZJ-ehu"/>
                                 </connections>
@@ -108,7 +109,7 @@
                                     <constraint firstAttribute="width" constant="97" id="SNL-c9-JrC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="SNL-c9-JrC"/>
@@ -254,7 +255,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="nameExpense" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Expense" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-n6-0eO">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="hNq-BE-jvq" id="NVi-vs-Gfj"/>
                                 </connections>
@@ -280,7 +281,7 @@
                                     <constraint firstAttribute="width" constant="97" id="O4K-Fs-3IY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="O4K-Fs-3IY"/>
@@ -432,7 +433,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Owner" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wqd-Uv-oqW">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 <connections>
                                     <outlet property="delegate" destination="dqF-He-ZXv" id="ZSy-P5-7OY"/>
                                 </connections>
@@ -558,9 +559,145 @@
             </objects>
             <point key="canvasLocation" x="778.5" y="210"/>
         </scene>
+        <!--Debts View Controller-->
+        <scene sceneID="UYU-IC-z93">
+            <objects>
+                <tableViewController id="oQM-30-pzX" userLabel="Debts View Controller" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eZI-id-hAu">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="DebtCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="DebtCell" textLabel="AJR-8v-XYL" style="IBUITableViewCellStyleDefault" id="jjK-EU-2iC" customClass="DebtCell" customModule="RepFacil" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jjK-EU-2iC" id="IiI-Aq-f0w">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AJR-8v-XYL">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FxR-ni-XcG" userLabel="$">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="22" id="bEI-5I-FeU"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="bEI-5I-FeU"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="bEI-5I-FeU"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Debt" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNe-ea-aM9" userLabel="Debt">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="74" id="fO0-2k-kmO">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="120"/>
+                                                </constraint>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="fO0-2k-kmO"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="fO0-2k-kmO"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNx-xY-Mxw">
+                                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="116" id="6zL-zZ-Enw"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="6zL-zZ-Enw"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="6zL-zZ-Enw"/>
+                                                </mask>
+                                            </variation>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aNe-ea-aM9" firstAttribute="centerY" secondItem="AJR-8v-XYL" secondAttribute="centerY" id="B5G-DQ-5Gx"/>
+                                        <constraint firstItem="aNe-ea-aM9" firstAttribute="leading" secondItem="zNx-xY-Mxw" secondAttribute="trailing" constant="8" symbolic="YES" id="CDk-LE-PTQ"/>
+                                        <constraint firstItem="zNx-xY-Mxw" firstAttribute="leading" secondItem="FxR-ni-XcG" secondAttribute="trailing" constant="8" symbolic="YES" id="JAg-9N-tDK"/>
+                                        <constraint firstItem="FxR-ni-XcG" firstAttribute="baseline" secondItem="aNe-ea-aM9" secondAttribute="baseline" id="Obw-OB-7i9"/>
+                                        <constraint firstItem="zNx-xY-Mxw" firstAttribute="top" secondItem="IiI-Aq-f0w" secondAttribute="topMargin" constant="-1" id="Ooa-Pj-2FL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aNe-ea-aM9" secondAttribute="trailing" constant="-7" id="Pr5-Ta-yTI">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="FxR-ni-XcG"/>
+                                            <exclude reference="aNe-ea-aM9"/>
+                                            <exclude reference="zNx-xY-Mxw"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="Obw-OB-7i9"/>
+                                            <exclude reference="JAg-9N-tDK"/>
+                                            <exclude reference="Ooa-Pj-2FL"/>
+                                            <exclude reference="B5G-DQ-5Gx"/>
+                                            <exclude reference="CDk-LE-PTQ"/>
+                                            <exclude reference="Pr5-Ta-yTI"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="FxR-ni-XcG"/>
+                                            <include reference="aNe-ea-aM9"/>
+                                            <include reference="zNx-xY-Mxw"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="Obw-OB-7i9"/>
+                                            <include reference="JAg-9N-tDK"/>
+                                            <include reference="Ooa-Pj-2FL"/>
+                                            <include reference="B5G-DQ-5Gx"/>
+                                            <include reference="CDk-LE-PTQ"/>
+                                            <include reference="Pr5-Ta-yTI"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oQM-30-pzX" id="yAq-ZE-wmF"/>
+                            <outlet property="delegate" destination="oQM-30-pzX" id="yLg-A0-S9E"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Debts" image="Overview Pages 1-32" id="2ye-LN-Ohu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DWG-dR-YIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="870"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Expensive 2-32" width="32" height="32"/>
+        <image name="Overview Pages 1-32" width="32" height="32"/>
         <image name="Room-32" width="32" height="32"/>
     </resources>
 </document>
