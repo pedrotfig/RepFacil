@@ -365,7 +365,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="OwnerCell" selectionStyle="default" indentationWidth="10" textLabel="G4v-LW-xh7" detailTextLabel="Ww4-kS-OOX" style="IBUITableViewCellStyleValue1" id="Ccz-jj-uD6" customClass="OwnerCell" customModule="RepFacil" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="OwnerCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="OwnerCell" textLabel="G4v-LW-xh7" style="IBUITableViewCellStyleDefault" id="Ccz-jj-uD6" customClass="OwnerCell" customModule="RepFacil" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ccz-jj-uD6" id="wA7-lD-GCR">
@@ -380,15 +380,6 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ww4-kS-OOX">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -397,8 +388,8 @@
                                     <rect key="frame" x="0.0" y="214" width="400" height="542"/>
                                 </variation>
                                 <connections>
-                                    <outlet property="dataSource" destination="dqF-He-ZXv" id="er4-7W-sXv"/>
-                                    <outlet property="delegate" destination="dqF-He-ZXv" id="1O2-vN-HK8"/>
+                                    <outlet property="dataSource" destination="dqF-He-ZXv" id="W6L-N8-qgd"/>
+                                    <outlet property="delegate" destination="dqF-He-ZXv" id="H8M-Nz-9X1"/>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kYv-x5-nqu">

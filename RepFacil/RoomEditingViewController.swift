@@ -21,6 +21,8 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         SharedData.rooms[0].addOwner(named: "Jéssica")
         SharedData.rooms[1].addOwner(named: "Sophia")
         SharedData.rooms[1].addOwner(named: "Lúcia")
+        
+        self.ownersTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,14 +46,15 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return SharedData.rooms.count
+        return SharedData.selectedRoom!.owners.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         var ownerCell : OwnerCell = self.ownersTableView.dequeueReusableCellWithIdentifier("OwnerCell") as! OwnerCell
         
-        ownerCell.correspondingPerson = SharedData.selectedRoom?.owners[indexPath.row]
-        ownerCell.textLabel?.text = ownerCell.correspondingPerson?.name
+        ownerCell.correspondingPerson = SharedData.selectedRoom!.owners[indexPath.row]
+        ownerCell.textLabel?.text = ownerCell.correspondingPerson!.name
         
         return ownerCell
     }
