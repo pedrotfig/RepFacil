@@ -302,6 +302,9 @@
                                 <include reference="II3-2m-1Ue"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="xHd-h4-afi" appends="YES" id="6xn-TM-vRi"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="kPX-aW-bXU"/>
                     <connections>
@@ -425,6 +428,9 @@
                                 <include reference="kYv-x5-nqu"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="FHz-UV-qU8" appends="YES" id="M3k-Wt-z5F"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="9LL-A4-ksg"/>
                     <navigationItem key="navigationItem" id="TNl-rc-3Ag"/>
