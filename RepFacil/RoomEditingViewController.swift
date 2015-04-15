@@ -8,15 +8,12 @@
 
 import UIKit
 
-class RoomEditingViewController: UIViewController {
+class RoomEditingViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,8 +27,7 @@ class RoomEditingViewController: UIViewController {
         return true;
     }
     
-    func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+    @IBAction func onTapped(sender: AnyObject) {
         view.endEditing(true)
     }
     

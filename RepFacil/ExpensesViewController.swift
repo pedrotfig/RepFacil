@@ -18,9 +18,6 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
     
         self.expenses.append(Expenses(nameAccount: "Energy", expensive: 123))
         self.expenses.append(Expenses(nameAccount: "Internet", expensive: 100))
@@ -99,9 +96,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         return true;
     }
     
-    func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+    @IBAction func onTapped(sender: AnyObject) {
         view.endEditing(true)
     }
-    
 }

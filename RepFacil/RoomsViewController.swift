@@ -21,9 +21,6 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
-        
         SharedData.addRoom(named: "Room 1", withRent: 800)
         SharedData.addRoom(named: "Room 2", withRent: 1200)
         
@@ -66,7 +63,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        println("Selected")
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -74,8 +71,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return true;
     }
     
-    func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+    @IBAction func onTapped(sender: AnyObject) {
         view.endEditing(true)
     }
 }
