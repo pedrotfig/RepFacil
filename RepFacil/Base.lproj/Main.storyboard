@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoomCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomCell" textLabel="WXw-hs-kQa" detailTextLabel="yvi-9W-wLy" style="IBUITableViewCellStyleValue1" id="X4B-Wu-tdS" customClass="RoomCell" customModule="RepFacil" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoomCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RoomCell" textLabel="WXw-hs-kQa" detailTextLabel="yvi-9W-wLy" style="IBUITableViewCellStyleValue1" id="X4B-Wu-tdS" customClass="RoomCell" customModule="RepFacil" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4B-Wu-tdS" id="aUI-cc-ZId">
@@ -65,6 +65,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dqF-He-ZXv" kind="show" id="brd-Ue-302"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -370,6 +373,7 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="9LL-A4-ksg"/>
+                    <navigationItem key="navigationItem" id="TNl-rc-3Ag"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TG-vj-28P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
