@@ -20,9 +20,9 @@ class ExpensesViewController: UIViewController {
         
 
     
-        expenses.append(Expenses(nameAccount: "Light", expensive: 123))
+        expenses.append(Expenses(nameAccount: "Energy", expensive: 123))
         expenses.append(Expenses(nameAccount: "Internet", expensive: 100))
-        expenses.append(Expenses(nameAccount: "Buys", expensive: 150))
+        expenses.append(Expenses(nameAccount: "Shopping", expensive: 150))
         expenses.append(Expenses(nameAccount: "Water", expensive: 56))
     
     
