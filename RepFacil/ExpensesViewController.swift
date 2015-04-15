@@ -14,6 +14,7 @@ class ExpensesViewController: UIViewController {
     @IBOutlet weak var nameExpense: UITextField!
     @IBOutlet weak var priceExpense: UITextField!
     @IBOutlet var expenses : [Expenses] = []
+    @IBOutlet weak var tableExpense: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,9 @@ class ExpensesViewController: UIViewController {
     
             println("\(person.name) pays \(individualExpense)")
     
-        }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     
@@ -47,7 +50,39 @@ class ExpensesViewController: UIViewController {
             for i in 0..<(expenses.count) {
                 println("Expense: \(expenses[i].getName()) -> cost: \(expenses[i].getExpensive())")
             }
+            tableExpense.reloadData()
+            nameExpense.text = ""
+            priceExpense.text = ""
+            
+            var all : AllExpenses = AllExpenses()
+            
+            println("individual expense \(all.eachExpenses(expenses, person: SharedData.peopleList()))")
+            
+            for person in SharedData.peopleList() {
+                var individualExpense: Double = person.room.getIndividualRent() + all.eachExpenses(expenses, person: SharedData.peopleList())
+                
+                println("\(person.name) pays \(individualExpense)")
+                
+            }
         }
+        
     }
+    
+    func tableView(tableExpense numberOfRowsInSection: UITableView, section: Int) -> Int {
+        
+        return expenses.count
+    }
+    
+//    func tableView(tableExpense cellForRowAtIndexPath: UITableView, indexPath: NSIndexPath) -> UITableViewCell{
+//        
+//        var cell : CellExpense = tableExpense.dequeueReusableCellWithIdentifier("cellExpense")
+//        
+//        
+//        cell.labelName.text = expenses[indexPath.row].getName()
+//        cell.labelPrice.text = String(stringInterpolationSegment: expenses[indexPath.row].getExpensive())
+//        
+//        return cell
+//    }
+ 
     
 }
