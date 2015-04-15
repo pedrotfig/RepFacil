@@ -52,13 +52,12 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         if(!(self.nameExpense.text.isEmpty) && !(self.priceExpense.text.isEmpty)){
             
             self.expenses.append(Expenses(nameAccount: self.nameExpense.text, expensive: Double((priceExpense.text).toInt()!)))
-            
-            for i in 0..<(self.expenses.count) {
-                println("Expense: \(self.expenses[i].getName()) -> cost: \(self.expenses[i].getExpensive())")
-            }
+
             self.tableExpense.reloadData()
             self.nameExpense.text = ""
             self.priceExpense.text = ""
+            
+            
             
             var all : AllExpenses = AllExpenses()
             

@@ -50,4 +50,10 @@ struct SharedData {
         
         return peopleArray
     }
+    
+    
+    
+    /* temp variables */
+    static var selectedRoom : Room? = nil
+    
 }
