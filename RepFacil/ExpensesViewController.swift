@@ -99,9 +99,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         return true;
     }
     
-    func DismissKeyboard(){
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+    @IBAction func onTapped(sender: AnyObject) {
         view.endEditing(true)
     }
-    
 }

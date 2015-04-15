@@ -134,6 +134,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Whu-xr-0a6"/>
@@ -154,6 +155,9 @@
                                 <include reference="ejH-6G-O7D"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VKI-Ja-32E" appends="YES" id="h2i-dH-3Gc"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="JAK-nl-cwa"/>
                     <connections>
@@ -164,6 +168,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="VKI-Ja-32E">
+                    <connections>
+                        <action selector="onTapped:" destination="BYZ-38-t0r" id="ggn-nr-nTy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-52.5" y="190.5"/>
         </scene>
@@ -302,6 +311,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEz-BG-F2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="xHd-h4-afi">
+                    <connections>
+                        <action selector="onTapped:" destination="hNq-BE-jvq" id="sWp-Sg-nIM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-508" y="1097"/>
         </scene>
@@ -377,6 +391,11 @@
                     <navigationItem key="navigationItem" id="TNl-rc-3Ag"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4TG-vj-28P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer cancelsTouchesInView="NO" id="FHz-UV-qU8">
+                    <connections>
+                        <action selector="onTapped:" destination="dqF-He-ZXv" id="J7D-YO-2B2"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="778.5" y="210"/>
         </scene>
