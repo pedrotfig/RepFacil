@@ -50,4 +50,9 @@ struct SharedData {
         
         return peopleArray
     }
+    
+    
+    
+    /* Temp variables */
+    
 }
