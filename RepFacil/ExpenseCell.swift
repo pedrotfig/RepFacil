@@ -8,7 +8,9 @@
 
 import UIKit
 
-class CellExpense: UITableViewCell {
+class ExpenseCell: UITableViewCell {
+    
+    var correspondingExpense : Expenses? = nil
     
     @IBOutlet weak var labelName : UILabel!
     
