@@ -8,25 +8,28 @@
 
 import UIKit
 
-class ExpensesViewController: UIViewController {
+class ExpensesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
 
     @IBOutlet weak var nameExpense: UITextField!
     @IBOutlet weak var priceExpense: UITextField!
-    @IBOutlet var expenses : [Expenses] = []
+    var expenses : [Expenses] = []
     @IBOutlet weak var tableExpense: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
     
-        expenses.append(Expenses(nameAccount: "Energy", expensive: 123))
-        expenses.append(Expenses(nameAccount: "Internet", expensive: 100))
-        expenses.append(Expenses(nameAccount: "Shopping", expensive: 150))
-        expenses.append(Expenses(nameAccount: "Water", expensive: 56))
+        self.expenses.append(Expenses(nameAccount: "Energy", expensive: 123))
+        self.expenses.append(Expenses(nameAccount: "Internet", expensive: 100))
+        self.expenses.append(Expenses(nameAccount: "Shopping", expensive: 150))
+        self.expenses.append(Expenses(nameAccount: "Water", expensive: 56))
     
-    
+        
+        self.tableExpense.reloadData()
+        
         var all : AllExpenses = AllExpenses()
     
         println("individual expense \(all.eachExpenses(expenses, person: SharedData.peopleList()))")
@@ -46,20 +49,20 @@ class ExpensesViewController: UIViewController {
     
     
     @IBAction func saveExpense(sender: AnyObject) {
-        if(!(nameExpense.text.isEmpty) && !(priceExpense.text.isEmpty)){
+        if(!(self.nameExpense.text.isEmpty) && !(self.priceExpense.text.isEmpty)){
             
-            expenses.append(Expenses(nameAccount: nameExpense.text, expensive: Double((priceExpense.text).toInt()!)))
+            self.expenses.append(Expenses(nameAccount: self.nameExpense.text, expensive: Double((priceExpense.text).toInt()!)))
             
-            for i in 0..<(expenses.count) {
-                println("Expense: \(expenses[i].getName()) -> cost: \(expenses[i].getExpensive())")
+            for i in 0..<(self.expenses.count) {
+                println("Expense: \(self.expenses[i].getName()) -> cost: \(self.expenses[i].getExpensive())")
             }
-            tableExpense.reloadData()
-            nameExpense.text = ""
-            priceExpense.text = ""
+            self.tableExpense.reloadData()
+            self.nameExpense.text = ""
+            self.priceExpense.text = ""
             
             var all : AllExpenses = AllExpenses()
             
-            println("individual expense \(all.eachExpenses(expenses, person: SharedData.peopleList()))")
+            println("individual expense \(all.eachExpenses(self.expenses, person: SharedData.peopleList()))")
             
             for person in SharedData.peopleList() {
                 var individualExpense: Double = person.room.getIndividualRent() + all.eachExpenses(expenses, person: SharedData.peopleList())
@@ -71,21 +74,34 @@ class ExpensesViewController: UIViewController {
         
     }
     
-    func tableView(tableExpense numberOfRowsInSection: UITableView, section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return expenses.count
+        return self.expenses.count
     }
     
-//    func tableView(tableExpense cellForRowAtIndexPath: UITableView, indexPath: NSIndexPath) -> UITableViewCell{
-//        
-//        var cell : CellExpense = tableExpense.dequeueReusableCellWithIdentifier("cellExpense")
-//        
-//        
-//        cell.labelName.text = expenses[indexPath.row].getName()
-//        cell.labelPrice.text = String(stringInterpolationSegment: expenses[indexPath.row].getExpensive())
-//        
-//        return cell
-//    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var cell : ExpenseCell = self.tableExpense.dequeueReusableCellWithIdentifier("ExpenseCell") as! ExpenseCell
+        
+        
+        cell.textLabel?.text = self.expenses[indexPath.row].getName()
+        cell.detailTextLabel?.text = String(stringInterpolationSegment: self.expenses[indexPath.row].getExpensive())
+        
+        return cell
+    }
  
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
 }

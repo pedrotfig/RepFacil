@@ -12,8 +12,4 @@ class ExpenseCell: UITableViewCell {
     
     var correspondingExpense : Expenses? = nil
     
-    @IBOutlet weak var labelName : UILabel!
-    
-    @IBOutlet weak var labelPrice : UILabel!
-    
 }

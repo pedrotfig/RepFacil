@@ -39,15 +39,32 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoomCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomCell" id="X4B-Wu-tdS" customClass="RoomCell" customModule="RepFacil" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoomCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RoomCell" textLabel="WXw-hs-kQa" detailTextLabel="yvi-9W-wLy" style="IBUITableViewCellStyleValue1" id="X4B-Wu-tdS" customClass="RoomCell" customModule="RepFacil" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4B-Wu-tdS" id="aUI-cc-ZId">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WXw-hs-kQa">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yvi-9W-wLy">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    </variation>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="dqF-He-ZXv" kind="show" id="CVN-Xz-uiJ"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -74,6 +91,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="27" y="104" width="344" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Y7f-ZJ-ehu"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rent" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jqu-zv-MIn">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
@@ -82,6 +102,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="50" y="157" width="97" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="akf-jd-m9E"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdU-we-qRI">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -92,6 +115,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="325" y="155" width="46" height="32"/>
                                 </variation>
+                                <connections>
+                                    <action selector="onSavedButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NtB-U1-Fiu"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejH-6G-O7D">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -127,7 +153,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="JAK-nl-cwa"/>
                     <connections>
+                        <outlet property="newRoomName" destination="bbu-SZ-yOp" id="YJq-Jj-Uf6"/>
+                        <outlet property="newRoomRent" destination="Jqu-zv-MIn" id="iNs-Ps-xBW"/>
                         <outlet property="roomsTableView" destination="Whu-xr-0a6" id="BpT-vH-HZx"/>
+                        <outlet property="saveRoomButton" destination="UdU-we-qRI" id="DP6-kg-iu3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -159,55 +188,40 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="ExpenseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseCell" id="iJS-QL-ejk" customClass="ExpenseCell" customModule="RepFacil" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="ExpenseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseCell" textLabel="ZA1-Fa-iXI" detailTextLabel="jx1-eh-PM4" style="IBUITableViewCellStyleValue1" id="iJS-QL-ejk" customClass="ExpenseCell" customModule="RepFacil" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iJS-QL-ejk" id="8uy-Fd-aN7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="name" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-IM-oLc">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZA1-Fa-iXI">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="18" y="11" width="42" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="price" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Uu-zw-pll">
-                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jx1-eh-PM4">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="340" y="11" width="42" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
-                                            <variation key="default">
-                                                <mask key="subviews">
-                                                    <exclude reference="ozH-IM-oLc"/>
-                                                    <exclude reference="8Uu-zw-pll"/>
-                                                </mask>
-                                            </variation>
-                                            <variation key="heightClass=regular-widthClass=compact">
-                                                <mask key="subviews">
-                                                    <include reference="ozH-IM-oLc"/>
-                                                    <include reference="8Uu-zw-pll"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="labelName" destination="ozH-IM-oLc" id="g23-gk-sNq"/>
-                                            <outlet property="labelPrice" destination="8Uu-zw-pll" id="0D2-oU-UTw"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="-5" y="223" width="411" height="528"/>
                                 </variation>
                                 <connections>
-                                    <outlet property="delegate" destination="hNq-BE-jvq" id="UHc-pJ-gbo"/>
+                                    <outlet property="dataSource" destination="hNq-BE-jvq" id="f3z-ow-AxA"/>
+                                    <outlet property="delegate" destination="hNq-BE-jvq" id="MQG-fM-M0a"/>
                                 </connections>
                             </tableView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="nameExpense" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name Expense" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Kl-n6-0eO">
@@ -217,6 +231,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="27" y="109" width="346" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="hNq-BE-jvq" id="NVi-vs-Gfj"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-zf-pv4">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -246,6 +263,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="57" y="163" width="97" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="hNq-BE-jvq" id="87O-Cc-MpS"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -309,6 +329,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="27" y="105" width="346" height="30"/>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="dqF-He-ZXv" id="ZSy-P5-7OY"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGb-ZI-7ST">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>

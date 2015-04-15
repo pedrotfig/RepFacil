@@ -8,15 +8,21 @@
 
 import UIKit
 
-class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     let roomCellIdentifier = "RoomCell"
 
+    @IBOutlet weak var newRoomName: UITextField!
+    @IBOutlet weak var newRoomRent: UITextField!
+    @IBOutlet weak var saveRoomButton: UIButton!
     @IBOutlet weak var roomsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
         
         SharedData.addRoom(named: "Room 1", withRent: 800)
         SharedData.addRoom(named: "Room 2", withRent: 1200)
@@ -34,6 +40,17 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     
+    @IBAction func onSavedButtonClicked(sender: AnyObject) {
+        if(!(self.newRoomName.text.isEmpty) && !(self.newRoomRent.text.isEmpty)){
+            
+            SharedData.addRoom(named: self.newRoomName.text, withRent: (self.newRoomRent.text as NSString).doubleValue)
+            
+            self.roomsTableView.reloadData()
+            self.newRoomName.text = ""
+            self.newRoomRent.text = ""
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SharedData.rooms.count
     }
@@ -43,6 +60,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         roomCell.correspondingRooom = SharedData.rooms[indexPath.row]
         roomCell.textLabel?.text = roomCell.correspondingRooom?.name
+        //roomCell.detailTextLabel?.text = String(format:"%f", roomCell.correspondingRooom?.rent)
         
         return roomCell
     }
@@ -51,6 +69,14 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
 
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
     
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
 }
 
