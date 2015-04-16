@@ -13,7 +13,6 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
 
     @IBOutlet weak var nameExpense: UITextField!
     @IBOutlet weak var priceExpense: UITextField!
-    //var expenses : [Expense] = []
     @IBOutlet weak var tableExpense: UITableView!
     
     override func viewDidLoad() {
@@ -49,11 +48,11 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    //    func tableView(tableView: UITableView, editingStyle forRowAtIndexPath: UITableViewCellEditingStyle, commitEditingStyle indexPath: NSIndexPath) {
-    //        if (editingStyle == UITableViewCellEditingStyleDelete) {
-    //
-    //        }
-    //    }
+//    func tableView(tableView: UITableView, editingStyle forRowAtIndexPath: UITableViewCellEditingStyle, commitEditingStyle indexPath: NSIndexPath) {
+//            if (editingStyle == UITableViewCellEditingStyleDelete) {
+//                SharedData.
+//            }
+//        }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
