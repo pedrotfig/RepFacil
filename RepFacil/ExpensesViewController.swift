@@ -66,7 +66,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         cell.textLabel?.text = SharedData.expensesList()[indexPath.row].getName()
-        cell.detailTextLabel?.text = String(stringInterpolationSegment: SharedData.expensesList()[indexPath.row].getExpensive())
+        cell.detailTextLabel?.text = String(format:"%.2f", SharedData.expensesList()[indexPath.row].getExpensive())
         
         return cell
     }
