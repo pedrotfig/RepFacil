@@ -8,13 +8,14 @@
 
 import UIKit
 
-@objc class Expenses: NSObject {
+@objc class Expense: NSObject {
 
+    private(set) var id : UInt
     private(set) var nameAccount: String = ""
-    
     private(set) var expensive: Double = 0
     
-    init(nameAccount : String, expensive : Double) {
+    init(id : UInt, nameAccount : String, expensive : Double) {
+        self.id = id
         self.nameAccount = nameAccount
         self.expensive = expensive
     }

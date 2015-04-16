@@ -11,7 +11,7 @@ import UIKit
 class AllExpenses: NSObject {
     
     
-    func totalExpenses (expenses: [Expenses]) -> Double {
+    func totalExpenses (expenses: [Expense]) -> Double {
         var total: Double = 0
         for i in 0 ..< expenses.count{
             total += expenses[i].getExpensive()
@@ -19,7 +19,7 @@ class AllExpenses: NSObject {
         return total
     }
     
-    func eachExpenses ( expenses: [Expenses],  person: [Person]) -> Double {
+    func eachExpenses ( expenses: [Expense],  person: [Person]) -> Double {
         return totalExpenses(expenses) / Double(person.count)
     }
     

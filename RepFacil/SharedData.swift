@@ -11,6 +11,7 @@ import UIKit
 struct SharedData {
     static var nextRoomId : UInt = 0
     static var nextPersonId : UInt = 0
+    static var nextExpenseId : UInt = 0
     
     static var rooms : [Room] = []
     
@@ -51,6 +52,29 @@ struct SharedData {
         return peopleArray
     }
     
+    static func expensesCount () -> Int {
+        var totalOfExpenses : Int
+        totalOfExpenses = 0
+        for person in peopleList() {
+            for expense in person.expenses {
+                totalOfExpenses++
+            }
+        }
+        
+        return totalOfExpenses
+    }
+    
+    static func expensesList () -> [Expense] {
+        var expensesArray : [Expense]
+        expensesArray = []
+        for person in peopleList() {
+            for expense in person.expenses {
+                expensesArray.append(expense)
+            }
+        }
+        
+        return expensesArray
+    }
     
     
     /* temp variables */

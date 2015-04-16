@@ -20,10 +20,6 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         
         self.title = "Owners"
         
-        SharedData.rooms[0].addOwner(named: "Jéssica")
-        SharedData.rooms[1].addOwner(named: "Sophia")
-        SharedData.rooms[1].addOwner(named: "Lúcia")
-        
         self.ownersTableView.reloadData()
     }
 

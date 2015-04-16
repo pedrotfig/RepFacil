@@ -563,7 +563,7 @@
         <!--Debts View Controller-->
         <scene sceneID="UYU-IC-z93">
             <objects>
-                <tableViewController id="oQM-30-pzX" userLabel="Debts View Controller" sceneMemberID="viewController">
+                <tableViewController id="oQM-30-pzX" userLabel="Debts View Controller" customClass="DebtsViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eZI-id-hAu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

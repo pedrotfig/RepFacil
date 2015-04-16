@@ -10,6 +10,6 @@ import UIKit
 
 class ExpenseCell: UITableViewCell {
     
-    var correspondingExpense : Expenses? = nil
+    var correspondingExpense : Expense? = nil
     
 }

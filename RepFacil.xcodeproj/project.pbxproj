@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C24A962E1ADD3AB3006C68EF /* AllExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */; };
-		C2950FA01ADC57C8005448E6 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2950F9F1ADC57C8005448E6 /* Expenses.swift */; };
+		C2950FA01ADC57C8005448E6 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2950F9F1ADC57C8005448E6 /* Expense.swift */; };
 		C299F9071ADED51100F7C8E5 /* OwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299F9061ADED51100F7C8E5 /* OwnerCell.swift */; };
 		C2D71D641ADD6874000D9AC6 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */; };
 		C2D71D661ADD971B000D9AC6 /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D71D651ADD971B000D9AC6 /* ExpenseCell.swift */; };
@@ -24,6 +24,7 @@
 		EB8935591ADE9641007F822D /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8935581ADE9641007F822D /* RoomCell.swift */; };
 		EB9CE7BC1ADEF2F700187E7F /* DebtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CE7BB1ADEF2F700187E7F /* DebtCell.swift */; };
 		EBCF723F1ADD652D00258FCD /* RoomEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */; };
+		EBFB32041AE03C5C0021E35B /* DebtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB32031AE03C5C0021E35B /* DebtsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExpenses.swift; sourceTree = "<group>"; };
-		C2950F9F1ADC57C8005448E6 /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
+		C2950F9F1ADC57C8005448E6 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		C299F9061ADED51100F7C8E5 /* OwnerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerCell.swift; sourceTree = "<group>"; };
 		C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		C2D71D651ADD971B000D9AC6 /* ExpenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		EB8935581ADE9641007F822D /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		EB9CE7BB1ADEF2F700187E7F /* DebtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtCell.swift; sourceTree = "<group>"; };
 		EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomEditingViewController.swift; sourceTree = "<group>"; };
+		EBFB32031AE03C5C0021E35B /* DebtsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebtsViewController.swift; path = ../DebtsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +140,7 @@
 		EB4A566C1ADC5159008F05F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C2950F9F1ADC57C8005448E6 /* Expenses.swift */,
+				C2950F9F1ADC57C8005448E6 /* Expense.swift */,
 				C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */,
 				EB4A566A1ADC5152008F05F1 /* Person.swift */,
 				EB4A566E1ADC5247008F05F1 /* Room.swift */,
@@ -162,6 +164,7 @@
 				EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */,
 				EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */,
 				C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */,
+				EBFB32031AE03C5C0021E35B /* DebtsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -278,7 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2950FA01ADC57C8005448E6 /* Expenses.swift in Sources */,
+				C2950FA01ADC57C8005448E6 /* Expense.swift in Sources */,
 				EB4A566B1ADC5152008F05F1 /* Person.swift in Sources */,
 				EBCF723F1ADD652D00258FCD /* RoomEditingViewController.swift in Sources */,
 				EB4A564D1ADC511F008F05F1 /* RoomsViewController.swift in Sources */,
@@ -287,6 +290,7 @@
 				EB4A564B1ADC511F008F05F1 /* AppDelegate.swift in Sources */,
 				EB8935591ADE9641007F822D /* RoomCell.swift in Sources */,
 				C2D71D661ADD971B000D9AC6 /* ExpenseCell.swift in Sources */,
+				EBFB32041AE03C5C0021E35B /* DebtsViewController.swift in Sources */,
 				EB4A56711ADC5E31008F05F1 /* SharedData.swift in Sources */,
 				C299F9071ADED51100F7C8E5 /* OwnerCell.swift in Sources */,
 				C24A962E1ADD3AB3006C68EF /* AllExpenses.swift in Sources */,
