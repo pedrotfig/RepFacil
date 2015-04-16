@@ -49,6 +49,12 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    //    func tableView(tableView: UITableView, editingStyle forRowAtIndexPath: UITableViewCellEditingStyle, commitEditingStyle indexPath: NSIndexPath) {
+    //        if (editingStyle == UITableViewCellEditingStyleDelete) {
+    //
+    //        }
+    //    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return SharedData.expensesCount()
