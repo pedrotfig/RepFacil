@@ -258,7 +258,7 @@
         <!--Expenses View Controller Scene-->
         <scene sceneID="oP2-BV-bCL">
             <objects>
-                <viewController id="hNq-BE-jvq" userLabel="Expenses View Controller Scene" customClass="ExpensesViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="hNq-BE-jvq" userLabel="Expenses View Controller Scene" customClass="ExpensesViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AYO-WX-y66"/>
                         <viewControllerLayoutGuide type="bottom" id="M9e-H8-nI3"/>
@@ -311,7 +311,7 @@
                                     <outlet property="delegate" destination="hNq-BE-jvq" id="87O-Cc-MpS"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YeR-ws-OdE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="YeR-ws-OdE">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>

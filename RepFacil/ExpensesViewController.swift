@@ -48,12 +48,16 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-//    func tableView(tableView: UITableView, editingStyle forRowAtIndexPath: UITableViewCellEditingStyle, commitEditingStyle indexPath: NSIndexPath) {
-//            if (editingStyle == UITableViewCellEditingStyleDelete) {
-//                SharedData.
-//            }
-//        }
-    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, cforRowAtIndexPath indexPath: NSIndexPath) {
+            if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
+                SharedData.peopleList()[0].expenses.removeAtIndex(indexPath.row)
+                
+                tableExpense.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+                
+            }
+        
+        }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return SharedData.expensesCount()
