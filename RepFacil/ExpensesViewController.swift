@@ -17,12 +17,10 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Expenses"
-        
         /* 
             "Edit" button for left side of nav bar
         */
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem()
     
         self.tableExpense.reloadData()
     }
@@ -35,7 +33,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     //add expenses
     @IBAction func saveExpense(sender: AnyObject) {
         if(!(self.nameExpense.text.isEmpty) && !(self.priceExpense.text.isEmpty)){
-            if(SharedData.rooms.count != 0){
+            if(SharedData.rooms.count != 0 && SharedData.peopleCount() != 0){
             SharedData.peopleList()[0].addExpense(named: self.nameExpense.text, withPrice: (self.priceExpense.text as NSString).doubleValue)
 
             self.tableExpense.reloadData()
@@ -77,7 +75,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     //dell cell
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, cforRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
             
             SharedData.peopleList()[0].expenses.removeAtIndex(indexPath.row)
