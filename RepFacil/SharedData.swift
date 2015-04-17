@@ -22,6 +22,17 @@ struct SharedData {
     static var expenses : [Expense] = []
     
     static func LoadState () {
+        LoadRoomsAndOwners()
+        LoadExpenses()
+        
+        
+    }
+    
+    static func LoadRoomsAndOwners () {
+        
+    }
+    
+    static func LoadExpenses () {
         let entityDescription =
         NSEntityDescription.entityForName("ExpenseEntity",
             inManagedObjectContext: managedObjectContext!)
@@ -46,9 +57,6 @@ struct SharedData {
                     nextExpenseId = result.id.unsignedLongValue + 1
                 }
             }
-        }
-        else {
-            
         }
     }
     
