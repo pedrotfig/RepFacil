@@ -11,7 +11,7 @@
             <objects>
                 <tabBarController id="lOS-He-mOB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="CoLives" id="eMQ-vI-SZx"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dhA-94-xhN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -31,7 +31,8 @@
         <scene sceneID="P7n-pL-8cR">
             <objects>
                 <navigationController id="0Jc-UC-n55" userLabel="Navigation Controller Rooms" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="fZ5-6n-VLs"/>
+                    <tabBarItem key="tabBarItem" title="Rooms" image="Room-32" id="fZ5-6n-VLs" customClass="RoomItemTabBar" customModule="CoLives" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1gP-Hj-aph">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -239,7 +240,7 @@
                             <outletCollection property="gestureRecognizers" destination="VKI-Ja-32E" appends="YES" id="h2i-dH-3Gc"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Rooms" image="Room-32" id="JAK-nl-cwa"/>
+                    <tabBarItem key="tabBarItem" title="Rooms" image="Room-32-1" id="JAK-nl-cwa"/>
                     <navigationItem key="navigationItem" title="CoLives" id="R7Z-KB-C99"/>
                     <connections>
                         <outlet property="newRoomName" destination="bbu-SZ-yOp" id="YJq-Jj-Uf6"/>
@@ -261,7 +262,7 @@
         <scene sceneID="kly-bX-ayw">
             <objects>
                 <navigationController id="gi4-Il-AFo" userLabel="Navigation Controller Expenses" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="dLc-il-pW3"/>
+                    <tabBarItem key="tabBarItem" title="Expenses" image="Expensive 2-32" id="dLc-il-pW3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mb7-Jn-oZu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -450,7 +451,7 @@
                             <outletCollection property="gestureRecognizers" destination="xHd-h4-afi" appends="YES" id="6xn-TM-vRi"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Expenses" image="Expensive 2-32" id="kPX-aW-bXU"/>
+                    <tabBarItem key="tabBarItem" image="Expensive 2-32" id="kPX-aW-bXU"/>
                     <navigationItem key="navigationItem" title="CoLives" id="DeM-sm-cys"/>
                     <connections>
                         <outlet property="nameExpense" destination="1Kl-n6-0eO" id="0qy-HZ-9OT"/>
@@ -626,7 +627,7 @@
         <scene sceneID="WRJ-q7-neW">
             <objects>
                 <navigationController id="aRP-5Q-OMS" userLabel="Navigation Controller Debts" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="mLb-2I-IrA"/>
+                    <tabBarItem key="tabBarItem" title="Debts" image="Overview Pages 1-32" id="mLb-2I-IrA"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CIp-rZ-pHR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -776,5 +777,6 @@
         <image name="Expensive 2-32" width="32" height="32"/>
         <image name="Overview Pages 1-32" width="32" height="32"/>
         <image name="Room-32" width="32" height="32"/>
+        <image name="Room-32-1" width="32" height="32"/>
     </resources>
 </document>

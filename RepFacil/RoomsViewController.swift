@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
     
     let roomCellIdentifier = "RoomCell"
 
@@ -22,11 +22,16 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view, typically from a nib.
         
         SharedData.LoadState()
+        
+        UITabBar.appearance().tintColor = UIColor.redColor()
+        
+
     }
     
     override func viewDidAppear(animated: Bool) {
         self.roomsTableView.reloadData()
     }
+
 
 
     override func didReceiveMemoryWarning() {
