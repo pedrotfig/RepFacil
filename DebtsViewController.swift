@@ -8,10 +8,14 @@
 
 import UIKit
 
-class DebtsViewController: UITableViewController {
+class DebtsViewController: UITableViewController, UITextFieldDelegate {
     
     let debtCellIdentifier = "DebtCell"
     let allExpenses : AllExpenses = AllExpenses()
+    
+    let inDebtColor : UIColor = UIColor.redColor()
+    let inCreditColor : UIColor = UIColor.blueColor()
+    let zeroedColor : UIColor = UIColor.grayColor()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +37,30 @@ class DebtsViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func refreshRemainingDebt(debtCell: DebtCell) {
+        let fullDebt : Double = (debtCell.correspondingPerson!.room.getIndividualRent() + allExpenses.eachExpenses(SharedData.expenses, person: SharedData.peopleList()))
+        let payed : Double = (debtCell.payedUp.text as NSString).doubleValue
+        let finalCredit : Double = payed - fullDebt
+        
+        if finalCredit < 0 {
+            debtCell.detailTextLabel?.text = String(format: "%.2f", finalCredit)
+            debtCell.detailTextLabel?.textColor = self.inDebtColor
+        }
+        else if finalCredit > 0 {
+            debtCell.detailTextLabel?.text = String(format: "+%.2f", finalCredit)
+            debtCell.detailTextLabel?.textColor = self.inCreditColor
+        }
+        else {
+            debtCell.detailTextLabel?.text = String(format: "%.2f", finalCredit)
+            debtCell.detailTextLabel?.textColor = self.zeroedColor
+        }
+    }
 
+    @IBAction func onTapped(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -52,10 +79,22 @@ class DebtsViewController: UITableViewController {
         let debtCell : DebtCell = self.tableView.dequeueReusableCellWithIdentifier(debtCellIdentifier) as! DebtCell
         
         debtCell.correspondingPerson = SharedData.peopleList()[indexPath.row]
+        (debtCell.payedUp as! DebtPayedTextField).correspondingDebtCell = debtCell
+        
         debtCell.textLabel?.text = debtCell.correspondingPerson?.name
-        debtCell.detailTextLabel?.text = String(format: "%.2f", (debtCell.correspondingPerson!.room.getIndividualRent() + allExpenses.eachExpenses(SharedData.expenses, person: SharedData.peopleList())))
+        self.refreshRemainingDebt(debtCell)
+        //debtCell.payedUp.addTarget(self, action:"refreshRemainingDebt", forControlEvents:UIControlEvents.EditingChanged)
         
         return debtCell
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        self.refreshRemainingDebt((textField as! DebtPayedTextField).correspondingDebtCell!)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
     }
 
     /*
