@@ -9,12 +9,27 @@
 import UIKit
 import CoreData
 
+/**
+* Person object. Must own a room.
+*/
 class Person: NSObject {
     
+    /**
+    * Person unique identifier
+    */
     var id : UInt
+    
+    /**
+    * Person's name
+    */
     var name : String
+    
+    /**
+    * Person's room
+    */
     var room : Room
     
+    /* shouldStore decides if the instance values will be stored with CoreData */
     init(id : UInt, name : String, room : Room, shouldStore : Bool) {
         self.id = id
         self.name = name
@@ -37,6 +52,9 @@ class Person: NSObject {
         }
     }
     
+    /**
+    Deletes a person entity from the CoreData
+    */
     func deleteFromDatabase () {
         
         let entityDescription =

@@ -8,9 +8,17 @@
 
 import UIKit
 
+/**
+* Object for certain calculation methods involving expenses
+*/
 class AllExpenses: NSObject {
     
+    /**
+    Calculates the sum of all expenses price values
     
+    :param: expenses Array with all expenses
+    :returns: Sum of all expense price values
+    */
     func totalExpenses (expenses: [Expense]) -> Double {
         var total: Double = 0
         for i in 0 ..< expenses.count{
@@ -19,6 +27,13 @@ class AllExpenses: NSObject {
         return total
     }
     
+    /**
+    Calculates how much a person has to pay from expenses.
+    
+    :param: expenses Array with all expenses
+    :param: person Array with all people
+    :returns: the total expense value for each person
+    */
     func eachExpenses ( expenses: [Expense],  person: [Person]) -> Double {
         return totalExpenses(expenses) / Double(person.count)
     }
