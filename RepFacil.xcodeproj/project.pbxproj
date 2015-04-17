@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		282AC0E91AE19A7F00A9ADF9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 282AC0E81AE19A7E00A9ADF9 /* Images.xcassets */; };
 		C24A962E1ADD3AB3006C68EF /* AllExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */; };
 		C2950FA01ADC57C8005448E6 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2950F9F1ADC57C8005448E6 /* Expense.swift */; };
 		C299F9071ADED51100F7C8E5 /* OwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299F9061ADED51100F7C8E5 /* OwnerCell.swift */; };
@@ -15,7 +16,6 @@
 		EB4A564B1ADC511F008F05F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */; };
 		EB4A564D1ADC511F008F05F1 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */; };
 		EB4A56501ADC511F008F05F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A564E1ADC511F008F05F1 /* Main.storyboard */; };
-		EB4A56521ADC511F008F05F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4A56511ADC511F008F05F1 /* Images.xcassets */; };
 		EB4A56551ADC511F008F05F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4A56531ADC511F008F05F1 /* LaunchScreen.xib */; };
 		EB4A56611ADC511F008F05F1 /* RepFacilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A56601ADC511F008F05F1 /* RepFacilTests.swift */; };
 		EB4A566B1ADC5152008F05F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A566A1ADC5152008F05F1 /* Person.swift */; };
@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		282AC0E81AE19A7E00A9ADF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExpenses.swift; sourceTree = "<group>"; };
 		C2950F9F1ADC57C8005448E6 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		C299F9061ADED51100F7C8E5 /* OwnerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerCell.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		EB4A564F1ADC511F008F05F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EB4A56511ADC511F008F05F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB4A56541ADC511F008F05F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB4A565A1ADC511F008F05F1 /* RepFacilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepFacilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4A565F1ADC511F008F05F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */,
 				EB7AFE8F1AE12E3400B0B66F /* DataModel.xcdatamodeld */,
 				EB4A564E1ADC511F008F05F1 /* Main.storyboard */,
-				EB4A56511ADC511F008F05F1 /* Images.xcassets */,
+				282AC0E81AE19A7E00A9ADF9 /* Images.xcassets */,
 				EB4A56531ADC511F008F05F1 /* LaunchScreen.xib */,
 				EB4A56481ADC511F008F05F1 /* Supporting Files */,
 			);
@@ -244,7 +244,7 @@
 				TargetAttributes = {
 					EB4A56441ADC511F008F05F1 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = AN2448FN23;
+						DevelopmentTeam = KZE6652BPQ;
 					};
 					EB4A56591ADC511F008F05F1 = {
 						CreatedOnToolsVersion = 6.3;
@@ -276,9 +276,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				282AC0E91AE19A7F00A9ADF9 /* Images.xcassets in Resources */,
 				EB4A56501ADC511F008F05F1 /* Main.storyboard in Resources */,
 				EB4A56551ADC511F008F05F1 /* LaunchScreen.xib in Resources */,
-				EB4A56521ADC511F008F05F1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
