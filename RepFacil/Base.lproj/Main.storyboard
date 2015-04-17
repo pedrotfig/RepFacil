@@ -11,7 +11,7 @@
             <objects>
                 <tabBarController id="lOS-He-mOB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="CoLives" id="eMQ-vI-SZx"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dhA-94-xhN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
