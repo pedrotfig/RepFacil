@@ -5,20 +5,20 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="PersonEntity" syncable="YES">
+    <entity name="PersonEntity" representedClassName="PRODUCT_MODULE_NAME.PersonEntity" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contained" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomEntity" inverseName="contain" inverseEntity="RoomEntity" syncable="YES"/>
     </entity>
-    <entity name="RoomEntity" syncable="YES">
+    <entity name="RoomEntity" representedClassName="PRODUCT_MODULE_NAME.RoomEntity" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rent" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <relationship name="contain" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PersonEntity" inverseName="contained" inverseEntity="PersonEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="ExpenseEntity" positionX="-36" positionY="27" width="128" height="90"/>
-        <element name="PersonEntity" positionX="-54" positionY="18" width="128" height="90"/>
-        <element name="RoomEntity" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ExpenseEntity" positionX="-144" positionY="153" width="128" height="90"/>
+        <element name="PersonEntity" positionX="-18" positionY="0" width="128" height="88"/>
+        <element name="RoomEntity" positionX="-270" positionY="-15" width="128" height="103"/>
     </elements>
 </model>
