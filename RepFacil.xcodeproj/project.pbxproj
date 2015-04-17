@@ -44,7 +44,7 @@
 		C299F9061ADED51100F7C8E5 /* OwnerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerCell.swift; sourceTree = "<group>"; };
 		C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
 		C2D71D651ADD971B000D9AC6 /* ExpenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
-		EB4A56451ADC511F008F05F1 /* RepFacil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepFacil.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4A56451ADC511F008F05F1 /* CoLives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoLives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4A56491ADC511F008F05F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		EB4A56461ADC511F008F05F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB4A56451ADC511F008F05F1 /* RepFacil.app */,
+				EB4A56451ADC511F008F05F1 /* CoLives.app */,
 				EB4A565A1ADC511F008F05F1 /* RepFacilTests.xctest */,
 			);
 			name = Products;
@@ -200,7 +200,7 @@
 			);
 			name = RepFacil;
 			productName = RepFacil;
-			productReference = EB4A56451ADC511F008F05F1 /* RepFacil.app */;
+			productReference = EB4A56451ADC511F008F05F1 /* CoLives.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EB4A56591ADC511F008F05F1 /* RepFacilTests */ = {
@@ -431,7 +431,7 @@
 				INFOPLIST_FILE = RepFacil/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoLives;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -444,7 +444,7 @@
 				INFOPLIST_FILE = RepFacil/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoLives;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
