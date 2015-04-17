@@ -48,6 +48,7 @@ class Room: NSObject {
         var i : Int = 0
         while i < self.owners.count {
             if self.owners[i].id == owner.id {
+                self.owners[i].deleteFromDatabase()
                 self.owners.removeAtIndex(i)
                 i = self.owners.count
             }
@@ -84,6 +85,31 @@ class Room: NSObject {
         }
         
         return entity!
+    }
+    
+    func deleteFromDatabase () {
+        
+        let entityDescription =
+        NSEntityDescription.entityForName("RoomEntity",
+            inManagedObjectContext: SharedData.managedObjectContext!)
+        
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        var error: NSError?
+        var results = SharedData.managedObjectContext?.executeFetchRequest(request,
+            error: &error) as! [RoomEntity]
+        
+        if results.count > 0 {
+            for result in results {
+                if result.id == self.id {
+                    SharedData.managedObjectContext?.deleteObject(result)
+                }
+                
+            }
+        }
+        
+        SharedData.managedObjectContext?.save(&error)
     }
     
 }

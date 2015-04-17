@@ -117,6 +117,7 @@ struct SharedData {
                 for owner in room.owners {
                     room.removeOwner(owner)
                 }
+                rooms[i].deleteFromDatabase()
                 rooms.removeAtIndex(i)
                 i = rooms.count
             }
