@@ -20,7 +20,7 @@
                     <connections>
                         <segue destination="0Jc-UC-n55" kind="relationship" relationship="viewControllers" id="2fT-hQ-gPF"/>
                         <segue destination="gi4-Il-AFo" kind="relationship" relationship="viewControllers" id="DE9-CX-yQ9"/>
-                        <segue destination="oQM-30-pzX" kind="relationship" relationship="viewControllers" id="63Z-h4-SUy"/>
+                        <segue destination="aRP-5Q-OMS" kind="relationship" relationship="viewControllers" id="aAv-O6-SGW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHs-mw-koS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -622,6 +622,23 @@
             </objects>
             <point key="canvasLocation" x="598.5" y="190.5"/>
         </scene>
+        <!--Navigation Controller Debts-->
+        <scene sceneID="WRJ-q7-neW">
+            <objects>
+                <navigationController id="aRP-5Q-OMS" userLabel="Navigation Controller Debts" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="mLb-2I-IrA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CIp-rZ-pHR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oQM-30-pzX" kind="relationship" relationship="rootViewController" id="Zoj-NG-56Z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Sy-WY-qOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="219" y="951.75"/>
+        </scene>
         <!--Debts View Controller-->
         <scene sceneID="UYU-IC-z93">
             <objects>
@@ -753,10 +770,11 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Debts" image="Overview Pages 1-32" id="2ye-LN-Ohu"/>
+                    <navigationItem key="navigationItem" title="Republic Easy" id="TAV-Vq-6Ri"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWG-dR-YIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="360" y="870"/>
+            <point key="canvasLocation" x="900" y="867"/>
         </scene>
     </scenes>
     <resources>
