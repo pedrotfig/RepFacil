@@ -9,12 +9,27 @@
 import UIKit
 import CoreData
 
+/**
+* Expense object containing the expense price value to be payed.
+*/
 @objc class Expense: NSObject {
     
+    /**
+    * Expense unique identifier
+    */
     private(set) var id : UInt
+    
+    /**
+    * Expense name
+    */
     private(set) var nameAccount: String = ""
+    
+    /**
+    * Expense price value
+    */
     private(set) var expensive: Double = 0
     
+    /* shouldStore decides if the instance values will be stored with CoreData */
     init(id : UInt, nameAccount : String, expensive : Double, shouldStore : Bool) {
         self.id = id
         self.nameAccount = nameAccount
@@ -38,6 +53,9 @@ import CoreData
         }
     }
     
+    /**
+    Deletes an expense entity from the CoreData
+    */
     func deleteFromDatabase () {
         
         let entityDescription =
@@ -64,27 +82,4 @@ import CoreData
         SharedData.managedObjectContext?.save(&error)
     }
     
-    /*
-    func addExpense(name: String, cost: Double){
-        
-        setName(name)
-        newExpensive(cost)
-    }
-    
-    func setName(newAccount: String){
-        self.nameAccount = newAccount
-    }
-    
-    func getName() -> String{
-        return self.nameAccount
-    }
-    
-    func newExpensive(newExpensive: Double){
-        self.expensive = newExpensive
-    }
-    
-    func getExpensive() -> Double{
-        return expensive
-    }
-    */
 }

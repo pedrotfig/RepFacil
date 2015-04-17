@@ -9,13 +9,33 @@
 import UIKit
 import CoreData
 
+/**
+* Room object containing the rent value and the current owners
+*/
 class Room: NSObject {
     
+    /**
+    * Room unique identifier
+    */
     var id : UInt
+    
+    /**
+    * Room name
+    */
     var name : String
+    
+    /**
+    * Array containing all the owners of this room
+    */
     var owners : [Person]
+    
+    /**
+    * Room rent value
+    */
     var rent : Double
     
+    
+    /* shouldStore decides if the instance values will be stored with CoreData */
     init(id : UInt, name : String, rent : Double, owners : [Person], shouldStore : Bool) {
         self.id = id
         self.name = name
@@ -39,11 +59,21 @@ class Room: NSObject {
         }
     }
     
+    /**
+    Adds a owner to the room.
+    
+    :param: name The owner's name
+    */
     func addOwner (named name : String) {
         self.owners.append(Person(id: SharedData.nextPersonId, name: name, room: self, shouldStore: true))
         SharedData.nextPersonId++
     }
     
+    /**
+    Removes a owner from the room.
+    
+    :param: owner Owner instance to be removed
+    */
     func removeOwner (owner : Person) {
         var i : Int = 0
         while i < self.owners.count {
@@ -58,10 +88,20 @@ class Room: NSObject {
         }
     }
     
+    /**
+    Calculates the rent each of the room owners has to pay
+    
+    :returns: The individual rent value
+    */
     func getIndividualRent () -> Double {
         return self.rent/Double(self.owners.count)
     }
     
+    /**
+    Gets the CoreData entity with the room values.
+    
+    :returns: The room CoreData entity
+    */
     func getEntity () -> RoomEntity {
         let entityDescription =
         NSEntityDescription.entityForName("RoomEntity",
@@ -87,6 +127,9 @@ class Room: NSObject {
         return entity!
     }
     
+    /**
+    Deletes a room entity from the CoreData
+    */
     func deleteFromDatabase () {
         
         let entityDescription =

@@ -9,23 +9,55 @@
 import UIKit
 import CoreData
 
+/**
+Struct with all shared data and methods used through the application.
+*/
 struct SharedData {
     static let managedObjectContext =
     (UIApplication.sharedApplication().delegate
         as! AppDelegate).managedObjectContext
     
+    /**
+    Incrementing unique id for the rooms.
+    */
     static var nextRoomId : UInt = 0
+    
+    /**
+    Incrementing unique id for the people.
+    */
     static var nextPersonId : UInt = 0
+    
+    /**
+    Incrementing unique id for the expenses.
+    */
     static var nextExpenseId : UInt = 0
     
+    /**
+    Array with all the rooms.
+    */
     static var rooms : [Room] = []
+    
+    /**
+    Array with all the expenses.
+    */
     static var expenses : [Expense] = []
     
+    /**
+    Room currently selected in the Adding/Removing rooms screen
+    */
+    static var selectedRoom : Room? = nil
+    
+    /**
+    Loads the state of the application data. Reads from the CoreData.
+    */
     static func LoadState () {
         LoadRoomsAndOwners()
         LoadExpenses()
     }
     
+    /**
+    Loads the state of the rooms and its owners. Reads from the CoreData.
+    */
     static func LoadRoomsAndOwners () {
         let entityDescription =
         NSEntityDescription.entityForName("RoomEntity",
@@ -77,6 +109,9 @@ struct SharedData {
         }
     }
     
+    /**
+    Loads the state of the expenses. Reads from the CoreData.
+    */
     static func LoadExpenses () {
         let entityDescription =
         NSEntityDescription.entityForName("ExpenseEntity",
@@ -105,11 +140,22 @@ struct SharedData {
         }
     }
     
+    /**
+    Creates a room.
+    
+    :param: name Room name
+    :param: rent Room rent value
+    */
     static func addRoom (named name : String, withRent rent : Double) {
         rooms.append(Room(id: nextRoomId, name: name, rent: rent, owners: [], shouldStore: true))
         nextRoomId++
     }
     
+    /**
+    Removes an existing room.
+    
+    :param: room Room instance to be removed
+    */
     static func removeRoom (room : Room) {
         var i : Int = 0
         while i < rooms.count {
@@ -127,6 +173,11 @@ struct SharedData {
         }
     }
     
+    /**
+    Calculates the total of people registered across all rooms.
+    
+    :returns: The total of people
+    */
     static func peopleCount () -> Int {
         var totalOfPeople : Int
         totalOfPeople = 0
@@ -139,6 +190,11 @@ struct SharedData {
         return totalOfPeople
     }
     
+    /**
+    Creates an array with all people registered across all rooms
+    
+    :returns: The array of people
+    */
     static func peopleList () -> [Person] {
         var peopleArray : [Person]
         peopleArray = []
@@ -151,11 +207,22 @@ struct SharedData {
         return peopleArray
     }
     
+    /**
+    Creates an expense.
+    
+    :param: name The expense name
+    :param: price The expense price value to be payed
+    */
     static func addExpense (named name : String, withPrice price : Double) {
         expenses.append(Expense(id: nextExpenseId, nameAccount: name, expensive: price, shouldStore: true))
         nextExpenseId++
     }
     
+    /**
+    Removes an existing expense.
+    
+    :param: expense The expense instance to be removed
+    */
     static func removeExpense (expense : Expense) {
         var i : Int = 0
         while i < expenses.count {
@@ -169,8 +236,5 @@ struct SharedData {
             }
         }
     }
-    
-    /* temp variables */
-    static var selectedRoom : Room? = nil
     
 }
