@@ -20,7 +20,7 @@ import CoreData
         self.nameAccount = nameAccount
         self.expensive = expensive
         
-        if (shouldStore) {
+        if shouldStore {
             
             let entityDescription =
             NSEntityDescription.entityForName("ExpenseEntity",

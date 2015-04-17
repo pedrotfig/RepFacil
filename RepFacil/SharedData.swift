@@ -24,12 +24,57 @@ struct SharedData {
     static func LoadState () {
         LoadRoomsAndOwners()
         LoadExpenses()
-        
-        
     }
     
     static func LoadRoomsAndOwners () {
+        let entityDescription =
+        NSEntityDescription.entityForName("RoomEntity",
+            inManagedObjectContext: managedObjectContext!)
         
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        //let pred = NSPredicate(format: "(name = %@)", name.text)
+        //request.predicate = pred
+        
+        var error: NSError?
+        
+        var objects = managedObjectContext?.executeFetchRequest(request,
+            error: &error) as! [RoomEntity]
+        
+        let results = objects
+        if results.count > 0 {
+            for result in results {
+                
+                var room : Room = Room(id: result.id.unsignedLongValue, name: result.name, rent: result.rent.doubleValue, owners: [], shouldStore: false)
+                
+                 /* Load owners */
+                var ownersEntityDescrition = NSEntityDescription.entityForName("PersonEntity",
+                    inManagedObjectContext: managedObjectContext!)
+                var ownerRequest = NSFetchRequest()
+                ownerRequest.entity = ownersEntityDescrition
+                var ownersEntities = managedObjectContext?.executeFetchRequest(ownerRequest,
+                    error: &error) as! [PersonEntity]
+                var owners: [Person] = []
+                
+                for ownerEntity in ownersEntities {
+                    if ownerEntity.contained.id == room.id {
+                        room.owners.append(Person(id: ownerEntity.id.unsignedLongValue, name: ownerEntity.name, room: room, shouldStore: false))
+                        
+                        if nextPersonId <= ownerEntity.id.unsignedLongValue {
+                            nextPersonId = ownerEntity.id.unsignedLongValue + 1
+                        }
+                    }
+                }
+                
+                /* Load current room in loop */
+                rooms.append(room)
+                
+                if nextRoomId <= result.id.unsignedLongValue {
+                    nextRoomId = result.id.unsignedLongValue + 1
+                }
+            }
+        }
     }
     
     static func LoadExpenses () {
@@ -61,7 +106,7 @@ struct SharedData {
     }
     
     static func addRoom (named name : String, withRent rent : Double) {
-        rooms.append(Room(id: nextRoomId, name: name, rent: rent))
+        rooms.append(Room(id: nextRoomId, name: name, rent: rent, owners: [], shouldStore: true))
         nextRoomId++
     }
     

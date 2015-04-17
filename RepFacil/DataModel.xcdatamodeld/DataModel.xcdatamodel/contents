@@ -5,12 +5,12 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="PersonEntity" representedClassName="PRODUCT_MODULE_NAME.PersonEntity" syncable="YES">
+    <entity name="PersonEntity" representedClassName="CoLives.PersonEntity" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="contained" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RoomEntity" inverseName="contain" inverseEntity="RoomEntity" syncable="YES"/>
     </entity>
-    <entity name="RoomEntity" representedClassName="PRODUCT_MODULE_NAME.RoomEntity" syncable="YES">
+    <entity name="RoomEntity" representedClassName="CoLives.RoomEntity" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rent" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
