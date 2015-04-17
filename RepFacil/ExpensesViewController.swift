@@ -81,7 +81,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
             
-            SharedData.expenses.removeAtIndex(indexPath.row)
+            SharedData.removeExpense(SharedData.expenses[indexPath.row])
             
             tableExpense.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             
