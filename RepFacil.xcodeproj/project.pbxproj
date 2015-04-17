@@ -23,6 +23,8 @@
 		EB4A56711ADC5E31008F05F1 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A56701ADC5E31008F05F1 /* SharedData.swift */; };
 		EB7AFE911AE12E3400B0B66F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB7AFE8F1AE12E3400B0B66F /* DataModel.xcdatamodeld */; };
 		EB83D8421AE14ED100140FAA /* ExpenseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83D8411AE14ED100140FAA /* ExpenseEntity.swift */; };
+		EB83D8441AE174D400140FAA /* RoomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83D8431AE174D400140FAA /* RoomEntity.swift */; };
+		EB83D8461AE174D500140FAA /* PersonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83D8451AE174D500140FAA /* PersonEntity.swift */; };
 		EB8935591ADE9641007F822D /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8935581ADE9641007F822D /* RoomCell.swift */; };
 		EB9CE7BC1ADEF2F700187E7F /* DebtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CE7BB1ADEF2F700187E7F /* DebtCell.swift */; };
 		EBCF723F1ADD652D00258FCD /* RoomEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */; };
@@ -61,6 +63,8 @@
 		EB4A56701ADC5E31008F05F1 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		EB7AFE901AE12E3400B0B66F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		EB83D8411AE14ED100140FAA /* ExpenseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseEntity.swift; sourceTree = "<group>"; };
+		EB83D8431AE174D400140FAA /* RoomEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomEntity.swift; sourceTree = "<group>"; };
+		EB83D8451AE174D500140FAA /* PersonEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonEntity.swift; sourceTree = "<group>"; };
 		EB8935581ADE9641007F822D /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		EB9CE7BB1ADEF2F700187E7F /* DebtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtCell.swift; sourceTree = "<group>"; };
 		EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomEditingViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		EB4A566C1ADC5159008F05F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB83D8451AE174D500140FAA /* PersonEntity.swift */,
+				EB83D8431AE174D400140FAA /* RoomEntity.swift */,
 				EB83D8411AE14ED100140FAA /* ExpenseEntity.swift */,
 				C2950F9F1ADC57C8005448E6 /* Expense.swift */,
 				C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */,
@@ -307,6 +313,8 @@
 				C299F9071ADED51100F7C8E5 /* OwnerCell.swift in Sources */,
 				C24A962E1ADD3AB3006C68EF /* AllExpenses.swift in Sources */,
 				C2D71D641ADD6874000D9AC6 /* ExpensesViewController.swift in Sources */,
+				EB83D8441AE174D400140FAA /* RoomEntity.swift in Sources */,
+				EB83D8461AE174D500140FAA /* PersonEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
