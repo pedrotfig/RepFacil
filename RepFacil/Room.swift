@@ -28,9 +28,14 @@ class Room: NSObject {
     }
     
     func removeOwner (owner : Person) {
-        for i in 0 ..< self.owners.count {
+        var i : Int = 0
+        while i < self.owners.count {
             if self.owners[i].id == owner.id {
                 self.owners.removeAtIndex(i)
+                i = self.owners.count
+            }
+            else {
+                i++
             }
         }
     }

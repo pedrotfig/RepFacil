@@ -14,16 +14,22 @@ struct SharedData {
     static var nextExpenseId : UInt = 0
     
     static var rooms : [Room] = []
+    static var expenses : [Expense] = []
     
     static func addRoom (named name : String, withRent rent : Double) {
-        rooms.append(Room(id: nextPersonId, name: name, rent: rent))
+        rooms.append(Room(id: nextRoomId, name: name, rent: rent))
         nextRoomId++
     }
     
     static func removeRoom (room : Room) {
-        for i in 0 ..< rooms.count {
+        var i : Int = 0
+        while i < rooms.count {
             if room.id == rooms[i].id {
                 rooms.removeAtIndex(i)
+                i = rooms.count
+            }
+            else {
+                i++
             }
         }
     }
@@ -52,30 +58,23 @@ struct SharedData {
         return peopleArray
     }
     
-    static func expensesCount () -> Int {
-        var totalOfExpenses : Int
-        totalOfExpenses = 0
-        for person in peopleList() {
-            for expense in person.expenses {
-                totalOfExpenses++
-            }
-        }
-        
-        return totalOfExpenses
+    static func addExpense (named name : String, withPrice price : Double) {
+        expenses.append(Expense(id: nextExpenseId, nameAccount: name, expensive: price))
+        nextExpenseId++
     }
     
-    static func expensesList () -> [Expense] {
-        var expensesArray : [Expense]
-        expensesArray = []
-        for person in peopleList() {
-            for expense in person.expenses {
-                expensesArray.append(expense)
+    static func removeExpense (expense : Expense) {
+        var i : Int = 0
+        while i < expenses.count {
+            if expense.id == expenses[i].id {
+                expenses.removeAtIndex(i)
+                i = expenses.count
+            }
+            else {
+                i++
             }
         }
-        
-        return expensesArray
     }
-    
     
     /* temp variables */
     static var selectedRoom : Room? = nil

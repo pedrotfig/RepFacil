@@ -34,7 +34,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func saveExpense(sender: AnyObject) {
         if(!(self.nameExpense.text.isEmpty) && !(self.priceExpense.text.isEmpty)){
             if(SharedData.rooms.count != 0 && SharedData.peopleCount() != 0){
-            SharedData.peopleList()[0].addExpense(named: self.nameExpense.text, withPrice: (self.priceExpense.text as NSString).doubleValue)
+            SharedData.addExpense(named: self.nameExpense.text, withPrice: (self.priceExpense.text as NSString).doubleValue)
 
             self.tableExpense.reloadData()
             self.nameExpense.text = ""
@@ -48,7 +48,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     // total rows in default section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return SharedData.expensesCount()
+        return SharedData.expenses.count
     }
     
     // UITableViewCells for each section and row
@@ -57,8 +57,8 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         var cell : ExpenseCell = self.tableExpense.dequeueReusableCellWithIdentifier("ExpenseCell") as! ExpenseCell
         
         
-        cell.textLabel?.text = SharedData.expensesList()[indexPath.row].getName()
-        cell.detailTextLabel?.text = String(format:"%.2f", SharedData.expensesList()[indexPath.row].getExpensive())
+        cell.textLabel?.text = SharedData.expenses[indexPath.row].getName()
+        cell.detailTextLabel?.text = String(format:"%.2f", SharedData.expenses[indexPath.row].getExpensive())
         
         return cell
     }
@@ -81,7 +81,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
             
-            SharedData.peopleList()[0].expenses.removeAtIndex(indexPath.row)
+            SharedData.expenses.removeAtIndex(indexPath.row)
             
             tableExpense.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             

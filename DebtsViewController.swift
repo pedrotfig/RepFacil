@@ -17,6 +17,8 @@ class DebtsViewController: UITableViewController {
         
         self.title = "Debts"
         
+        self.tableView.reloadData()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
