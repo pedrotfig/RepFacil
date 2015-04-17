@@ -29,7 +29,7 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Dispose of any resources that can be recreated.
     }
 
-    
+    //add new room
     @IBAction func onSavedButtonClicked(sender: AnyObject) {
         if(!(self.newRoomName.text.isEmpty) && !(self.newRoomRent.text.isEmpty)){
             
@@ -41,10 +41,12 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+    // total rows in default section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SharedData.rooms.count
     }
     
+    // UITableViewCells for each section and row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var roomCell : RoomCell = self.roomsTableView.dequeueReusableCellWithIdentifier(roomCellIdentifier) as! RoomCell
         
@@ -64,10 +66,12 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return true;
     }
     
+    //close keyboard
     @IBAction func onTapped(sender: AnyObject) {
         view.endEditing(true)
     }
     
+    // storyboard segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     
         var roomCell : RoomCell = sender as! RoomCell

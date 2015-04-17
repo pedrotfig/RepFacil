@@ -44,12 +44,14 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-
+    
+    // total rows in default section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return SharedData.expensesCount()
     }
     
+    // UITableViewCells for each section and row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell : ExpenseCell = self.tableExpense.dequeueReusableCellWithIdentifier("ExpenseCell") as! ExpenseCell
@@ -70,6 +72,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         return true;
     }
     
+    //enable dell cell with animation - called when a row deletion action is confirmed
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
@@ -88,6 +91,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    //close keyboard
     @IBAction func onTapped(sender: AnyObject) {
         view.endEditing(true)
     }

@@ -16,6 +16,7 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.ownersTableView.reloadData()
     }
 
@@ -24,10 +25,12 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    //close keyboard
     @IBAction func onTapped(sender: AnyObject) {
         view.endEditing(true)
     }
     
+    //add new owner
     @IBAction func onSavedOwnersClicked(sender: AnyObject) {
         if(!(self.newOwner.text.isEmpty)){
             
@@ -39,12 +42,12 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         }
     }
     
-    
+    //enable dell cell with animation - called when a row deletion action is confirmed
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
-    //dell cell
+    //dell cell - called when a row deletion action is confirmed
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
             println(SharedData.selectedRoom!.owners[indexPath.row].name)
@@ -58,10 +61,12 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         
     }
     
+     // total rows in default section
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SharedData.selectedRoom!.owners.count
     }
     
+    // UITableViewCells for each section and row
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var ownerCell : OwnerCell = self.ownersTableView.dequeueReusableCellWithIdentifier("OwnerCell") as! OwnerCell
@@ -74,6 +79,7 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     }
+    
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()

@@ -41,6 +41,7 @@ class DebtsViewController: UITableViewController {
         return SharedData.peopleList().count
     }
 
+    // UITableViewCells for each section and row
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let debtCell : DebtCell = self.tableView.dequeueReusableCellWithIdentifier(debtCellIdentifier) as! DebtCell
