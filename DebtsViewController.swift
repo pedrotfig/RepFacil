@@ -11,6 +11,7 @@ import UIKit
 class DebtsViewController: UITableViewController {
     
     let debtCellIdentifier = "DebtCell"
+    let allExpenses : AllExpenses = AllExpenses()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,7 @@ class DebtsViewController: UITableViewController {
         
         debtCell.correspondingPerson = SharedData.peopleList()[indexPath.row]
         debtCell.textLabel?.text = debtCell.correspondingPerson?.name
+        debtCell.detailTextLabel?.text = String(format: "%.2f", (debtCell.correspondingPerson!.room.getIndividualRent() + allExpenses.eachExpenses(SharedData.expenses, person: SharedData.peopleList())))
         
         return debtCell
     }
