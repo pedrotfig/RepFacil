@@ -7,14 +7,50 @@
 //
 
 import UIKit
+import CoreData
 
 struct SharedData {
+    static let managedObjectContext =
+    (UIApplication.sharedApplication().delegate
+        as! AppDelegate).managedObjectContext
+    
     static var nextRoomId : UInt = 0
     static var nextPersonId : UInt = 0
     static var nextExpenseId : UInt = 0
     
     static var rooms : [Room] = []
     static var expenses : [Expense] = []
+    
+    static func LoadState () {
+        let entityDescription =
+        NSEntityDescription.entityForName("ExpenseEntity",
+            inManagedObjectContext: managedObjectContext!)
+        
+        let request = NSFetchRequest()
+        request.entity = entityDescription
+        
+        //let pred = NSPredicate(format: "(name = %@)", name.text)
+        //request.predicate = pred
+        
+        var error: NSError?
+        
+        var objects = managedObjectContext?.executeFetchRequest(request,
+            error: &error) as! [ExpenseEntity]
+        
+        let results = objects
+        if results.count > 0 {
+            for result in results {
+                expenses.append(Expense(id: result.id.unsignedLongValue, nameAccount: result.name, expensive: result.price.doubleValue, shouldStore: false))
+                
+                if nextExpenseId <= result.id.unsignedLongValue {
+                    nextExpenseId = result.id.unsignedLongValue + 1
+                }
+            }
+        }
+        else {
+            
+        }
+    }
     
     static func addRoom (named name : String, withRent rent : Double) {
         rooms.append(Room(id: nextRoomId, name: name, rent: rent))
@@ -25,6 +61,9 @@ struct SharedData {
         var i : Int = 0
         while i < rooms.count {
             if room.id == rooms[i].id {
+                for owner in room.owners {
+                    room.removeOwner(owner)
+                }
                 rooms.removeAtIndex(i)
                 i = rooms.count
             }
@@ -59,7 +98,7 @@ struct SharedData {
     }
     
     static func addExpense (named name : String, withPrice price : Double) {
-        expenses.append(Expense(id: nextExpenseId, nameAccount: name, expensive: price))
+        expenses.append(Expense(id: nextExpenseId, nameAccount: name, expensive: price, shouldStore: true))
         nextExpenseId++
     }
     
@@ -67,6 +106,7 @@ struct SharedData {
         var i : Int = 0
         while i < expenses.count {
             if expense.id == expenses[i].id {
+                expense.deleteFromDatabase()
                 expenses.removeAtIndex(i)
                 i = expenses.count
             }

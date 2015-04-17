@@ -21,6 +21,8 @@
 		EB4A566B1ADC5152008F05F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A566A1ADC5152008F05F1 /* Person.swift */; };
 		EB4A566F1ADC5247008F05F1 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A566E1ADC5247008F05F1 /* Room.swift */; };
 		EB4A56711ADC5E31008F05F1 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A56701ADC5E31008F05F1 /* SharedData.swift */; };
+		EB7AFE911AE12E3400B0B66F /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB7AFE8F1AE12E3400B0B66F /* DataModel.xcdatamodeld */; };
+		EB83D8421AE14ED100140FAA /* ExpenseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83D8411AE14ED100140FAA /* ExpenseEntity.swift */; };
 		EB8935591ADE9641007F822D /* RoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8935581ADE9641007F822D /* RoomCell.swift */; };
 		EB9CE7BC1ADEF2F700187E7F /* DebtCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9CE7BB1ADEF2F700187E7F /* DebtCell.swift */; };
 		EBCF723F1ADD652D00258FCD /* RoomEditingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */; };
@@ -57,6 +59,8 @@
 		EB4A566A1ADC5152008F05F1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EB4A566E1ADC5247008F05F1 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		EB4A56701ADC5E31008F05F1 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		EB7AFE901AE12E3400B0B66F /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		EB83D8411AE14ED100140FAA /* ExpenseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseEntity.swift; sourceTree = "<group>"; };
 		EB8935581ADE9641007F822D /* RoomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCell.swift; sourceTree = "<group>"; };
 		EB9CE7BB1ADEF2F700187E7F /* DebtCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebtCell.swift; sourceTree = "<group>"; };
 		EBCF723E1ADD652D00258FCD /* RoomEditingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomEditingViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				EB4A566D1ADC5169008F05F1 /* View */,
 				EB4A566C1ADC5159008F05F1 /* Model */,
 				EB4A564A1ADC511F008F05F1 /* AppDelegate.swift */,
+				EB7AFE8F1AE12E3400B0B66F /* DataModel.xcdatamodeld */,
 				EB4A564E1ADC511F008F05F1 /* Main.storyboard */,
 				EB4A56511ADC511F008F05F1 /* Images.xcassets */,
 				EB4A56531ADC511F008F05F1 /* LaunchScreen.xib */,
@@ -142,6 +147,7 @@
 		EB4A566C1ADC5159008F05F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EB83D8411AE14ED100140FAA /* ExpenseEntity.swift */,
 				C2950F9F1ADC57C8005448E6 /* Expense.swift */,
 				C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */,
 				EB4A566A1ADC5152008F05F1 /* Person.swift */,
@@ -293,6 +299,8 @@
 				EB4A564B1ADC511F008F05F1 /* AppDelegate.swift in Sources */,
 				EB8935591ADE9641007F822D /* RoomCell.swift in Sources */,
 				C2D71D661ADD971B000D9AC6 /* ExpenseCell.swift in Sources */,
+				EB7AFE911AE12E3400B0B66F /* DataModel.xcdatamodeld in Sources */,
+				EB83D8421AE14ED100140FAA /* ExpenseEntity.swift in Sources */,
 				EBF67A551AE0D864005FA2BA /* DebtPayedTextField.swift in Sources */,
 				EBFB32041AE03C5C0021E35B /* DebtsViewController.swift in Sources */,
 				EB4A56711ADC5E31008F05F1 /* SharedData.swift in Sources */,
@@ -427,11 +435,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RepFacil/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoLives;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -440,6 +450,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RepFacil/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
@@ -514,6 +525,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB7AFE8F1AE12E3400B0B66F /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB7AFE901AE12E3400B0B66F /* DataModel.xcdatamodel */,
+			);
+			currentVersion = EB7AFE901AE12E3400B0B66F /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EB4A563D1ADC511F008F05F1 /* Project object */;
 }
