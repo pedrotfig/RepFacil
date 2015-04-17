@@ -10,7 +10,6 @@ import UIKit
 
 class ExpensesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
 
-
     @IBOutlet weak var nameExpense: UITextField!
     @IBOutlet weak var priceExpense: UITextField!
     @IBOutlet weak var tableExpense: UITableView!
@@ -20,13 +19,10 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
         self.title = "Expenses"
         
-//        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-//        view.addGestureRecognizer(tap)
-        
-        SharedData.peopleList()[0].addExpense(named: "Energy", withPrice: 123)
-        SharedData.peopleList()[0].addExpense(named: "Internet", withPrice: 100)
-        SharedData.peopleList()[0].addExpense(named: "Shopping", withPrice: 150)
-        SharedData.peopleList()[0].addExpense(named: "Water", withPrice: 56)
+        /* 
+            "Edit" button for left side of nav bar
+        */
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
     
         self.tableExpense.reloadData()
     }
@@ -36,27 +32,20 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
-    
+    //add expenses
     @IBAction func saveExpense(sender: AnyObject) {
         if(!(self.nameExpense.text.isEmpty) && !(self.priceExpense.text.isEmpty)){
+            if(SharedData.rooms.count != 0){
             SharedData.peopleList()[0].addExpense(named: self.nameExpense.text, withPrice: (self.priceExpense.text as NSString).doubleValue)
 
             self.tableExpense.reloadData()
             self.nameExpense.text = ""
             self.priceExpense.text = ""
+            }
         }
         
     }
     
-    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, cforRowAtIndexPath indexPath: NSIndexPath) {
-            if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
-                SharedData.peopleList()[0].expenses.removeAtIndex(indexPath.row)
-                
-                tableExpense.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-                
-            }
-        
-        }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -81,6 +70,24 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true;
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    //dell cell
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, cforRowAtIndexPath indexPath: NSIndexPath) {
+        if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
+            
+            SharedData.peopleList()[0].expenses.removeAtIndex(indexPath.row)
+            
+            tableExpense.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            self.tableExpense.reloadData()
+            
+        }
+        
     }
     
     @IBAction func onTapped(sender: AnyObject) {

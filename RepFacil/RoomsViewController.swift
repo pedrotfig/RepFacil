@@ -22,13 +22,6 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view, typically from a nib.
         
         self.title = "Rooms"
-        
-        SharedData.addRoom(named: "Room 1", withRent: 800)
-        SharedData.addRoom(named: "Room 2", withRent: 1200)
-        
-        SharedData.rooms[0].addOwner(named: "Jéssica")
-        SharedData.rooms[1].addOwner(named: "Sophia")
-        SharedData.rooms[1].addOwner(named: "Lúcia")
     }
 
     override func didReceiveMemoryWarning() {

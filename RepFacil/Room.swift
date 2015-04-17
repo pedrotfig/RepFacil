@@ -12,7 +12,7 @@ class Room: NSObject {
     
     var id : UInt
     var name : String
-    private(set) var owners : [Person]
+    var owners : [Person]
     var rent : Double
     
     init(id : UInt, name : String, rent : Double) {

@@ -17,7 +17,7 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+       self.navigationItem.rightBarButtonItem = self.editButtonItem()
         self.title = "Owners"
         
         self.ownersTableView.reloadData()
@@ -41,6 +41,25 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
             self.newOwner.text = ""
 
         }
+    }
+    
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    //dell cell
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, cforRowAtIndexPath indexPath: NSIndexPath) {
+        if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
+            println(SharedData.selectedRoom!.owners[indexPath.row].name)
+            SharedData.selectedRoom!.removeOwner(SharedData.selectedRoom!.owners[indexPath.row])
+            
+            ownersTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            self.ownersTableView.reloadData()
+            
+        }
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
