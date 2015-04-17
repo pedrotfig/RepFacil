@@ -35,13 +35,11 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     //add expenses
     @IBAction func saveExpense(sender: AnyObject) {
         if(!(self.nameExpense.text.isEmpty) && !(self.priceExpense.text.isEmpty)){
-            if(SharedData.rooms.count != 0 && SharedData.peopleCount() != 0){
             SharedData.addExpense(named: self.nameExpense.text, withPrice: (self.priceExpense.text as NSString).doubleValue)
 
             self.tableExpense.reloadData()
             self.nameExpense.text = ""
             self.priceExpense.text = ""
-            }
         }
         
     }
