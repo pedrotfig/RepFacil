@@ -21,8 +21,6 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         SharedData.LoadState()
     }
     
@@ -46,6 +44,20 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.newRoomName.text = ""
             self.newRoomRent.text = ""
         }
+    }
+    
+    //dell cell
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if ( editingStyle == UITableViewCellEditingStyle.Delete ) {
+            
+            SharedData.removeRoom(SharedData.rooms[indexPath.row])
+            
+            roomsTableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+            self.roomsTableView.reloadData()
+            
+        }
+        
     }
     
     // total rows in default section
