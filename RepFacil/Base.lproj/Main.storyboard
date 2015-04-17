@@ -469,7 +469,7 @@
                             <outletCollection property="gestureRecognizers" destination="xHd-h4-afi" appends="YES" id="6xn-TM-vRi"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Expenses" image="Expensive2-32" selectedImage="Expensive2-32" id="kPX-aW-bXU"/>
+                    <tabBarItem key="tabBarItem" title="Expenses" image="Expensive2-32" id="kPX-aW-bXU"/>
                     <navigationItem key="navigationItem" title="CoLives" id="DeM-sm-cys"/>
                     <connections>
                         <outlet property="nameExpense" destination="1Kl-n6-0eO" id="0qy-HZ-9OT"/>
@@ -786,7 +786,7 @@
                             <outlet property="delegate" destination="oQM-30-pzX" id="yLg-A0-S9E"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Debts" image="Overview Pages 1-32" selectedImage="Overview Pages 1-32" id="2ye-LN-Ohu"/>
+                    <tabBarItem key="tabBarItem" title="Debts" image="Overview Pages 1-32" id="2ye-LN-Ohu"/>
                     <navigationItem key="navigationItem" title="CoLives" id="TAV-Vq-6Ri"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWG-dR-YIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
