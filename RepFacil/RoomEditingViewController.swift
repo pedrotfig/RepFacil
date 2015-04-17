@@ -48,7 +48,7 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         return true
     }
     
-    //dell cell - called when a row deletion action is confirmed
+    //delete cell - called when a row deletion action is confirmed
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             println(SharedData.selectedRoom!.owners[indexPath.row].name)

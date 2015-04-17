@@ -47,7 +47,7 @@
         <!--Rooms View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Rooms View Controller" customClass="RoomsViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Rooms View Controller" customClass="RoomsViewController" customModule="CoLives" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -119,7 +119,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoomCell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RoomCell" textLabel="WXw-hs-kQa" style="IBUITableViewCellStyleValue1" id="X4B-Wu-tdS" customClass="RoomCell" customModule="RepFacil" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RoomCell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RoomCell" textLabel="WXw-hs-kQa" style="IBUITableViewCellStyleValue1" id="X4B-Wu-tdS" customClass="RoomCell" customModule="CoLives" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X4B-Wu-tdS" id="aUI-cc-ZId">
@@ -277,7 +277,7 @@
         <!--Expenses View Controller Scene-->
         <scene sceneID="oP2-BV-bCL">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="hNq-BE-jvq" userLabel="Expenses View Controller Scene" customClass="ExpensesViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="hNq-BE-jvq" userLabel="Expenses View Controller Scene" customClass="ExpensesViewController" customModule="CoLives" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AYO-WX-y66"/>
                         <viewControllerLayoutGuide type="bottom" id="M9e-H8-nI3"/>
@@ -334,7 +334,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="ExpenseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseCell" textLabel="ZA1-Fa-iXI" detailTextLabel="jx1-eh-PM4" style="IBUITableViewCellStyleValue1" id="iJS-QL-ejk" customClass="ExpenseCell" customModule="RepFacil" customModuleProvider="target">
+                                    <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="ExpenseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseCell" textLabel="ZA1-Fa-iXI" detailTextLabel="jx1-eh-PM4" style="IBUITableViewCellStyleValue1" id="iJS-QL-ejk" customClass="ExpenseCell" customModule="CoLives" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iJS-QL-ejk" id="8uy-Fd-aN7">
@@ -470,7 +470,7 @@
         <!--Room Editing View Controller-->
         <scene sceneID="DJV-fo-KtG">
             <objects>
-                <viewController id="dqF-He-ZXv" userLabel="Room Editing View Controller" customClass="RoomEditingViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dqF-He-ZXv" userLabel="Room Editing View Controller" customClass="RoomEditingViewController" customModule="CoLives" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c2F-gN-HPV"/>
                         <viewControllerLayoutGuide type="bottom" id="1Ta-UM-Gh2"/>
@@ -517,7 +517,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="OwnerCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="OwnerCell" textLabel="G4v-LW-xh7" style="IBUITableViewCellStyleDefault" id="Ccz-jj-uD6" customClass="OwnerCell" customModule="RepFacil" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="OwnerCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="OwnerCell" textLabel="G4v-LW-xh7" style="IBUITableViewCellStyleDefault" id="Ccz-jj-uD6" customClass="OwnerCell" customModule="CoLives" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ccz-jj-uD6" id="wA7-lD-GCR">
@@ -642,13 +642,13 @@
         <!--Debts View Controller-->
         <scene sceneID="UYU-IC-z93">
             <objects>
-                <tableViewController id="oQM-30-pzX" userLabel="Debts View Controller" customClass="DebtsViewController" customModule="RepFacil" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="oQM-30-pzX" userLabel="Debts View Controller" customClass="DebtsViewController" customModule="CoLives" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eZI-id-hAu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="DebtCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="DebtCell" textLabel="AJR-8v-XYL" detailTextLabel="nUQ-b4-jTv" style="IBUITableViewCellStyleValue1" id="jjK-EU-2iC" customClass="DebtCell" customModule="RepFacil" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="DebtCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="DebtCell" textLabel="AJR-8v-XYL" detailTextLabel="nUQ-b4-jTv" style="IBUITableViewCellStyleValue1" id="jjK-EU-2iC" customClass="DebtCell" customModule="CoLives" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jjK-EU-2iC" id="IiI-Aq-f0w">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -683,7 +683,7 @@
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNx-xY-Mxw" customClass="DebtPayedTextField" customModule="RepFacil" customModuleProvider="target">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNx-xY-Mxw" customClass="DebtPayedTextField" customModule="CoLives" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="116" id="6zL-zZ-Enw">

@@ -16,11 +16,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        /* 
-            "Edit" button for left side of nav bar
-        */
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+
     }
     
     override func viewDidAppear(animated: Bool) {
