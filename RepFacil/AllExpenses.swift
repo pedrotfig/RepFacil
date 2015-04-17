@@ -14,7 +14,7 @@ class AllExpenses: NSObject {
     func totalExpenses (expenses: [Expense]) -> Double {
         var total: Double = 0
         for i in 0 ..< expenses.count{
-            total += expenses[i].getExpensive()
+            total += expenses[i].expensive
         }
         return total
     }

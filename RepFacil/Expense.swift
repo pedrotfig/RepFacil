@@ -7,19 +7,42 @@
 //
 
 import UIKit
+import CoreData
 
 @objc class Expense: NSObject {
-
+    
     private(set) var id : UInt
     private(set) var nameAccount: String = ""
     private(set) var expensive: Double = 0
     
-    init(id : UInt, nameAccount : String, expensive : Double) {
+    let entityDescription =
+    NSEntityDescription.entityForName("ExpenseEntity",
+        inManagedObjectContext: SharedData.managedObjectContext!)
+    
+    init(id : UInt, nameAccount : String, expensive : Double, shouldStore : Bool) {
         self.id = id
         self.nameAccount = nameAccount
         self.expensive = expensive
+        
+        if (shouldStore) {
+            
+            var expense = ExpenseEntity(entity: entityDescription!,
+                insertIntoManagedObjectContext: SharedData.managedObjectContext)
+            
+            expense.id = id
+            expense.name = nameAccount
+            expense.price = expensive
+            
+            var error : NSError?
+            SharedData.managedObjectContext?.save(&error)
+        }
     }
     
+    func deleteFromDatabase () {
+        
+    }
+    
+    /*
     func addExpense(name: String, cost: Double){
         
         setName(name)
@@ -41,5 +64,5 @@ import UIKit
     func getExpensive() -> Double{
         return expensive
     }
-    
+    */
 }

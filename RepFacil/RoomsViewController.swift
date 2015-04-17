@@ -22,6 +22,8 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // Do any additional setup after loading the view, typically from a nib.
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        SharedData.LoadState()
     }
     
     override func viewDidAppear(animated: Bool) {

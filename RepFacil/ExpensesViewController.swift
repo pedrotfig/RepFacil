@@ -57,8 +57,8 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         var cell : ExpenseCell = self.tableExpense.dequeueReusableCellWithIdentifier("ExpenseCell") as! ExpenseCell
         
         
-        cell.textLabel?.text = SharedData.expenses[indexPath.row].getName()
-        cell.detailTextLabel?.text = String(format:"%.2f", SharedData.expenses[indexPath.row].getExpensive())
+        cell.textLabel?.text = SharedData.expenses[indexPath.row].nameAccount
+        cell.detailTextLabel?.text = String(format:"%.2f", SharedData.expenses[indexPath.row].expensive)
         
         return cell
     }
