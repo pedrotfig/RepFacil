@@ -21,7 +21,9 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
             "Edit" button for left side of nav bar
         */
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
     
+    override func viewDidAppear(animated: Bool) {
         self.tableExpense.reloadData()
     }
     

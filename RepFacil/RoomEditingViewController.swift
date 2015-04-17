@@ -15,8 +15,9 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         self.ownersTableView.reloadData()
     }
 

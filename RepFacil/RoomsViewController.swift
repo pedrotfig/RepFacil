@@ -23,6 +23,11 @@ class RoomsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.roomsTableView.reloadData()
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

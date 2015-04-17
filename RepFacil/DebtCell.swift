@@ -11,6 +11,7 @@ import UIKit
 class DebtCell: UITableViewCell {
     
     var correspondingPerson : Person? = nil
+    @IBOutlet weak var payedUp: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
