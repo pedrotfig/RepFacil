@@ -17,7 +17,6 @@
 		EB4A564D1ADC511F008F05F1 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */; };
 		EB4A56501ADC511F008F05F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4A564E1ADC511F008F05F1 /* Main.storyboard */; };
 		EB4A56551ADC511F008F05F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB4A56531ADC511F008F05F1 /* LaunchScreen.xib */; };
-		EB4A56611ADC511F008F05F1 /* RepFacilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A56601ADC511F008F05F1 /* RepFacilTests.swift */; };
 		EB4A566B1ADC5152008F05F1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A566A1ADC5152008F05F1 /* Person.swift */; };
 		EB4A566F1ADC5247008F05F1 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A566E1ADC5247008F05F1 /* Room.swift */; };
 		EB4A56711ADC5E31008F05F1 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4A56701ADC5E31008F05F1 /* SharedData.swift */; };
@@ -56,8 +55,6 @@
 		EB4A564F1ADC511F008F05F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB4A56541ADC511F008F05F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB4A565A1ADC511F008F05F1 /* RepFacilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepFacilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB4A565F1ADC511F008F05F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB4A56601ADC511F008F05F1 /* RepFacilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepFacilTests.swift; sourceTree = "<group>"; };
 		EB4A566A1ADC5152008F05F1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EB4A566E1ADC5247008F05F1 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		EB4A56701ADC5E31008F05F1 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -94,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				EB4A56471ADC511F008F05F1 /* RepFacil */,
-				EB4A565D1ADC511F008F05F1 /* RepFacilTests */,
 				EB4A56461ADC511F008F05F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,23 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				EB4A56491ADC511F008F05F1 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		EB4A565D1ADC511F008F05F1 /* RepFacilTests */ = {
-			isa = PBXGroup;
-			children = (
-				EB4A56601ADC511F008F05F1 /* RepFacilTests.swift */,
-				EB4A565E1ADC511F008F05F1 /* Supporting Files */,
-			);
-			path = RepFacilTests;
-			sourceTree = "<group>";
-		};
-		EB4A565E1ADC511F008F05F1 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				EB4A565F1ADC511F008F05F1 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -244,7 +223,6 @@
 				TargetAttributes = {
 					EB4A56441ADC511F008F05F1 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = KZE6652BPQ;
 					};
 					EB4A56591ADC511F008F05F1 = {
 						CreatedOnToolsVersion = 6.3;
@@ -322,7 +300,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB4A56611ADC511F008F05F1 /* RepFacilTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +423,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RepFacil/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoLives;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -461,7 +438,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = RepFacil/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoLives;
 				TARGETED_DEVICE_FAMILY = 1;
