@@ -31,16 +31,6 @@
 		EBFB32041AE03C5C0021E35B /* DebtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFB32031AE03C5C0021E35B /* DebtsViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		EB4A565B1ADC511F008F05F1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EB4A563D1ADC511F008F05F1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EB4A56441ADC511F008F05F1;
-			remoteInfo = RepFacil;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		282AC0E81AE19A7E00A9ADF9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExpenses.swift; sourceTree = "<group>"; };
@@ -77,13 +67,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB4A56571ADC511F008F05F1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -99,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				EB4A56451ADC511F008F05F1 /* CoLives.app */,
-				EB4A565A1ADC511F008F05F1 /* RepFacilTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,24 +176,6 @@
 			productReference = EB4A56451ADC511F008F05F1 /* CoLives.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EB4A56591ADC511F008F05F1 /* RepFacilTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EB4A56671ADC511F008F05F1 /* Build configuration list for PBXNativeTarget "RepFacilTests" */;
-			buildPhases = (
-				EB4A56561ADC511F008F05F1 /* Sources */,
-				EB4A56571ADC511F008F05F1 /* Frameworks */,
-				EB4A56581ADC511F008F05F1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EB4A565C1ADC511F008F05F1 /* PBXTargetDependency */,
-			);
-			name = RepFacilTests;
-			productName = RepFacilTests;
-			productReference = EB4A565A1ADC511F008F05F1 /* RepFacilTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,7 +208,6 @@
 			projectRoot = "";
 			targets = (
 				EB4A56441ADC511F008F05F1 /* RepFacil */,
-				EB4A56591ADC511F008F05F1 /* RepFacilTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,13 +220,6 @@
 				282AC0E91AE19A7F00A9ADF9 /* Images.xcassets in Resources */,
 				EB4A56501ADC511F008F05F1 /* Main.storyboard in Resources */,
 				EB4A56551ADC511F008F05F1 /* LaunchScreen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EB4A56581ADC511F008F05F1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,14 +260,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EB4A565C1ADC511F008F05F1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EB4A56441ADC511F008F05F1 /* RepFacil */;
-			targetProxy = EB4A565B1ADC511F008F05F1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EB4A564E1ADC511F008F05F1 /* Main.storyboard */ = {
@@ -445,40 +393,6 @@
 			};
 			name = Release;
 		};
-		EB4A56681ADC511F008F05F1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RepFacilTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepFacil.app/RepFacil";
-			};
-			name = Debug;
-		};
-		EB4A56691ADC511F008F05F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RepFacilTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepFacil.app/RepFacil";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -496,15 +410,6 @@
 			buildConfigurations = (
 				EB4A56651ADC511F008F05F1 /* Debug */,
 				EB4A56661ADC511F008F05F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB4A56671ADC511F008F05F1 /* Build configuration list for PBXNativeTarget "RepFacilTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EB4A56681ADC511F008F05F1 /* Debug */,
-				EB4A56691ADC511F008F05F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
