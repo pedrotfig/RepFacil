@@ -44,7 +44,8 @@
 		EB4A564C1ADC511F008F05F1 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		EB4A564F1ADC511F008F05F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB4A56541ADC511F008F05F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		EB4A565A1ADC511F008F05F1 /* RepFacilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepFacilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4A565F1ADC511F008F05F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB4A56601ADC511F008F05F1 /* RepFacilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepFacilTests.swift; sourceTree = "<group>"; };
 		EB4A566A1ADC5152008F05F1 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		EB4A566E1ADC5247008F05F1 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		EB4A56701ADC5E31008F05F1 /* SharedData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
@@ -187,10 +188,7 @@
 				TargetAttributes = {
 					EB4A56441ADC511F008F05F1 = {
 						CreatedOnToolsVersion = 6.3;
-					};
-					EB4A56591ADC511F008F05F1 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = EB4A56441ADC511F008F05F1;
+						DevelopmentTeam = AN2448FN23;
 					};
 				};
 			};
