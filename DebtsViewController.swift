@@ -79,9 +79,11 @@ class DebtsViewController: UITableViewController, UITextFieldDelegate {
         let debtCell : DebtCell = self.tableView.dequeueReusableCellWithIdentifier(debtCellIdentifier) as! DebtCell
         
         debtCell.correspondingPerson = SharedData.peopleList()[indexPath.row]
+        
         (debtCell.payedUp as! DebtPayedTextField).correspondingDebtCell = debtCell
         
         debtCell.textLabel?.text = debtCell.correspondingPerson?.name
+        
         self.refreshRemainingDebt(debtCell)
         //debtCell.payedUp.addTarget(self, action:"refreshRemainingDebt", forControlEvents:UIControlEvents.EditingChanged)
         

@@ -47,6 +47,8 @@ struct SharedData {
     */
     static var selectedRoom : Room? = nil
     
+    static var selectedExpense : Expense? = nil
+    
     /**
     Loads the state of the application data. Reads from the CoreData.
     */

@@ -49,7 +49,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWn-yG-dag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-780" y="124.5"/>
+            <point key="canvasLocation" x="-768" y="274.5"/>
         </scene>
         <!--Rooms View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -265,7 +265,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-52.5" y="190.5"/>
+            <point key="canvasLocation" x="-16.5" y="274.5"/>
         </scene>
         <!--Navigation Controller Expenses-->
         <scene sceneID="kly-bX-ayw">
@@ -287,7 +287,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dIb-rU-hj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1387.5" y="1042.5"/>
+            <point key="canvasLocation" x="-3031.5" y="1054.5"/>
         </scene>
         <!--Expenses View Controller Scene-->
         <scene sceneID="oP2-BV-bCL">
@@ -343,7 +343,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" red="0.34469696970000002" green="0.34469696970000002" blue="0.34469696970000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="ExpenseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExpenseCell" textLabel="ZA1-Fa-iXI" detailTextLabel="jx1-eh-PM4" style="IBUITableViewCellStyleValue1" id="iJS-QL-ejk" customClass="ExpenseCell" customModule="CoLives" customModuleProvider="target">
+                                    <tableViewCell multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="ExpenseCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ExpenseCell" textLabel="ZA1-Fa-iXI" detailTextLabel="jx1-eh-PM4" style="IBUITableViewCellStyleValue1" id="iJS-QL-ejk" customClass="ExpenseCell" customModule="CoLives" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iJS-QL-ejk" id="8uy-Fd-aN7">
@@ -369,6 +369,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="77n-9W-Wti" kind="show" id="HZ1-6X-chy"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -484,7 +487,48 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-606" y="1047"/>
+            <point key="canvasLocation" x="-2022" y="1041"/>
+        </scene>
+        <!--Set Expenses Table View Controller-->
+        <scene sceneID="KAG-LH-rDq">
+            <objects>
+                <tableViewController id="77n-9W-Wti" userLabel="Set Expenses Table View Controller" customClass="SetExpensesViewController" customModule="CoLives" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bpX-nD-wTB">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="SetExpensesCell" selectionStyle="default" indentationWidth="10" textLabel="nqn-80-Mw2" style="IBUITableViewCellStyleDefault" id="Do9-uO-XUE" customClass="SetExpensesCell" customModule="CoLives" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Do9-uO-XUE" id="oMO-ul-QBp">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nqn-80-Mw2">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="77n-9W-Wti" id="aOC-AB-eEP"/>
+                            <outlet property="delegate" destination="77n-9W-Wti" id="M21-xB-ufi"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kst-iK-s55" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="T9B-z3-kNt">
+                    <connections>
+                        <outlet property="delegate" destination="bpX-nD-wTB" id="cKP-Sq-FzF"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1276.5" y="1046.25"/>
         </scene>
         <!--Room Editing View Controller-->
         <scene sceneID="DJV-fo-KtG">
@@ -641,7 +685,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="598.5" y="190.5"/>
+            <point key="canvasLocation" x="778.5" y="270"/>
         </scene>
         <!--Navigation Controller Debts-->
         <scene sceneID="WRJ-q7-neW">
@@ -663,7 +707,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sy-WY-qOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="219" y="951.75"/>
+            <point key="canvasLocation" x="-213" y="1077.75"/>
         </scene>
         <!--Debts View Controller-->
         <scene sceneID="UYU-IC-z93">
@@ -796,7 +840,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="900" y="867"/>
+            <point key="canvasLocation" x="636" y="1065"/>
         </scene>
     </scenes>
     <resources>
