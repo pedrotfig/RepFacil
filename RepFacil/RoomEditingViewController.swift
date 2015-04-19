@@ -87,6 +87,13 @@ class RoomEditingViewController:UIViewController, UITableViewDelegate, UITableVi
         return true;
     }
     
+    // storyboard segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var roomCell : RoomCell = sender as! RoomCell
+        SharedData.selectedRoom = roomCell.correspondingRoom
+    }
+    
     /*
     // MARK: - Navigation
 

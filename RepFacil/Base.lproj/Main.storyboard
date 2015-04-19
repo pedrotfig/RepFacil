@@ -497,9 +497,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="SetExpensesCell" selectionStyle="default" indentationWidth="10" textLabel="nqn-80-Mw2" style="IBUITableViewCellStyleDefault" id="Do9-uO-XUE" customClass="SetExpensesCell" customModule="CoLives" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="SetExpensesCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SetExpensesCell" textLabel="nqn-80-Mw2" detailTextLabel="AFu-vv-Pij" style="IBUITableViewCellStyleValue1" id="Do9-uO-XUE" customClass="SetExpensesCell" customModule="CoLives" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Do9-uO-XUE" id="oMO-ul-QBp">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="right" tableViewCell="Do9-uO-XUE" id="oMO-ul-QBp">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nqn-80-Mw2">
@@ -511,7 +511,41 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             </variation>
                                         </label>
+                                        <switch opaque="NO" contentMode="right" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="633-19-0ru">
+                                            <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                                        </switch>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AFu-vv-Pij">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            </variation>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="633-19-0ru" firstAttribute="centerY" secondItem="nqn-80-Mw2" secondAttribute="centerY" id="WOC-fJ-elc"/>
+                                        <constraint firstItem="633-19-0ru" firstAttribute="leading" secondItem="oMO-ul-QBp" secondAttribute="leading" constant="174" id="fK1-rQ-q3u"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="633-19-0ru"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="WOC-fJ-elc"/>
+                                            <exclude reference="fK1-rQ-q3u"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="633-19-0ru"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="WOC-fJ-elc"/>
+                                            <include reference="fK1-rQ-q3u"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -520,13 +554,12 @@
                             <outlet property="delegate" destination="77n-9W-Wti" id="M21-xB-ufi"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="tableExpense" destination="bpX-nD-wTB" id="j6Y-6e-jVn"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kst-iK-s55" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="T9B-z3-kNt">
-                    <connections>
-                        <outlet property="delegate" destination="bpX-nD-wTB" id="cKP-Sq-FzF"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="T9B-z3-kNt"/>
             </objects>
             <point key="canvasLocation" x="-1276.5" y="1046.25"/>
         </scene>

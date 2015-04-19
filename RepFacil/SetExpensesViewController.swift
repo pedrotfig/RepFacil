@@ -9,7 +9,8 @@
 import UIKit
 
 class SetExpensesViewController: UITableViewController {
-    let expensesCellIdentifier = "SetExpensesCell"
+    @IBOutlet weak var tableExpense: UITableView!
+    let allExpenses : AllExpenses = AllExpenses()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +42,18 @@ class SetExpensesViewController: UITableViewController {
     // UITableViewCells for each section and row
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell : SetExpensesCell = self.tableView.dequeueReusableCellWithIdentifier(expensesCellIdentifier) as! SetExpensesCell
-            
-//        cell.correspondingPerson = SharedData.peopleList()[indexPath.row]
-//        
-//        cell.textLabel?.text = cell.correspondingPerson?.name
-//        
-//        
+        let cell : SetExpensesCell
+        
+        cell = (tableView.dequeueReusableCellWithIdentifier("SetExpensesCell") as! SetExpensesCell)
+        
+        cell.textLabel?.text = SharedData.peopleList()[indexPath.row].name
+        
+        if(SharedData.peopleCount() != 0){
+            let thisExpense : Double = (allExpenses.thisExpense(SharedData.selectedExpense!, numbers: SharedData.peopleCount()))
+        
+            cell.detailTextLabel?.text = String(format: "+%.2f", thisExpense)
+        }
+        
         return cell
     }
     

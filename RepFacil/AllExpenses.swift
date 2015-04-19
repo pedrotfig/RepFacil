@@ -38,6 +38,17 @@ class AllExpenses: NSObject {
         return totalExpenses(expenses) / Double(person.count)
     }
     
+    /**
+    Calculates how much a person has to pay from expenses.
+    
+    :param: expenses Array with all expenses
+    :param: person Array with all people
+    :returns: the total expense value for each person
+    */
+    func thisExpense ( expenses: Expense,  numbers: Int) -> Double {
+        return expenses.expensive / Double(numbers)
+    }
+    
 //    func resultExpenses (expenses: Expenses, persons : [Person] , individualPerson: Person) -> Double{
 //        return eachExpenses(expenses, person: persons)
 //    }

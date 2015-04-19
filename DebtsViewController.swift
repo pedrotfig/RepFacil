@@ -98,5 +98,5 @@ class DebtsViewController: UITableViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true;
     }
-
+    
 }

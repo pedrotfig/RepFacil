@@ -10,8 +10,8 @@ import UIKit
 
 class SetExpensesCell: UITableViewCell {
     
-    var correspondingPerson : Person? = nil
-
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

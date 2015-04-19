@@ -55,6 +55,7 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         
         var cell : ExpenseCell = self.tableExpense.dequeueReusableCellWithIdentifier("ExpenseCell") as! ExpenseCell
         
+        cell.correspondingExpense = SharedData.expenses[indexPath.row]
         
         cell.textLabel?.text = SharedData.expenses[indexPath.row].nameAccount
         cell.detailTextLabel?.text = String(format:"%.2f", SharedData.expenses[indexPath.row].expensive)
@@ -95,5 +96,14 @@ class ExpensesViewController: UIViewController, UITableViewDelegate, UITableView
         view.endEditing(true)
     }
     
+    // storyboard segue
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var expenseCell : ExpenseCell = sender as! ExpenseCell
+        SharedData.selectedExpense = expenseCell.correspondingExpense
+        
+        println(expenseCell.correspondingExpense)
+    }
+
 
 }
