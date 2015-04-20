@@ -34,7 +34,6 @@ class Person: NSObject {
         self.id = id
         self.name = name
         self.room = room
-        
         if shouldStore {
             let entityDescription =
             NSEntityDescription.entityForName("PersonEntity",

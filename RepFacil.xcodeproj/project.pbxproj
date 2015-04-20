@@ -11,6 +11,7 @@
 		C24A962E1ADD3AB3006C68EF /* AllExpenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */; };
 		C24BAC221AE410A500E7C4E9 /* SetExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24BAC211AE410A500E7C4E9 /* SetExpensesViewController.swift */; };
 		C24BAC241AE4110A00E7C4E9 /* SetExpensesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24BAC231AE4110A00E7C4E9 /* SetExpensesCell.swift */; };
+		C24BAC261AE47E6700E7C4E9 /* SwitchThisExpense.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24BAC251AE47E6700E7C4E9 /* SwitchThisExpense.swift */; };
 		C2950FA01ADC57C8005448E6 /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2950F9F1ADC57C8005448E6 /* Expense.swift */; };
 		C299F9071ADED51100F7C8E5 /* OwnerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C299F9061ADED51100F7C8E5 /* OwnerCell.swift */; };
 		C2D71D641ADD6874000D9AC6 /* ExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */; };
@@ -38,6 +39,7 @@
 		C24A962D1ADD3AB3006C68EF /* AllExpenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllExpenses.swift; sourceTree = "<group>"; };
 		C24BAC211AE410A500E7C4E9 /* SetExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetExpensesViewController.swift; sourceTree = "<group>"; };
 		C24BAC231AE4110A00E7C4E9 /* SetExpensesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetExpensesCell.swift; sourceTree = "<group>"; };
+		C24BAC251AE47E6700E7C4E9 /* SwitchThisExpense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchThisExpense.swift; sourceTree = "<group>"; };
 		C2950F9F1ADC57C8005448E6 /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		C299F9061ADED51100F7C8E5 /* OwnerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OwnerCell.swift; sourceTree = "<group>"; };
 		C2D71D631ADD6874000D9AC6 /* ExpensesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpensesViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				C299F9061ADED51100F7C8E5 /* OwnerCell.swift */,
 				EB9CE7BB1ADEF2F700187E7F /* DebtCell.swift */,
 				EBF67A541AE0D864005FA2BA /* DebtPayedTextField.swift */,
+				C24BAC251AE47E6700E7C4E9 /* SwitchThisExpense.swift */,
 				C24BAC231AE4110A00E7C4E9 /* SetExpensesCell.swift */,
 			);
 			name = Cells;
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C24BAC261AE47E6700E7C4E9 /* SwitchThisExpense.swift in Sources */,
 				C2950FA01ADC57C8005448E6 /* Expense.swift in Sources */,
 				EB4A566B1ADC5152008F05F1 /* Person.swift in Sources */,
 				EBCF723F1ADD652D00258FCD /* RoomEditingViewController.swift in Sources */,

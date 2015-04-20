@@ -10,6 +10,7 @@ import UIKit
 
 class SetExpensesCell: UITableViewCell {
     
+    @IBOutlet weak var SwitchExpense: UISwitch!
     
     
     override func awakeFromNib() {

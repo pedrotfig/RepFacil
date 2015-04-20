@@ -11,6 +11,7 @@ import UIKit
 class SetExpensesViewController: UITableViewController {
     @IBOutlet weak var tableExpense: UITableView!
     let allExpenses : AllExpenses = AllExpenses()
+    var sub : Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,16 @@ class SetExpensesViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
+    @IBAction func SwitchChanged(sender: UISwitch) {
+        if sender.on{
+            self.sub = self.sub - 1
+        }else{
+            self.sub = self.sub + 1
+        }
+            self.viewDidAppear(true)
+    }
     
     // MARK: - Table view data source
     
@@ -39,6 +50,17 @@ class SetExpensesViewController: UITableViewController {
         return SharedData.peopleCount()
     }
     
+    func refresh(cell:UITableViewCell, count: Int){
+        if(count != 0){
+            let thisExpense : Double = (allExpenses.thisExpense(SharedData.selectedExpense!, numbers: count))
+            
+            cell.detailTextLabel?.text = String(format: "+%.2f", thisExpense)
+        }else{
+            cell.detailTextLabel?.text = String(format: "+%.2f", 0)
+
+        }
+    }
+    
     // UITableViewCells for each section and row
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -48,11 +70,13 @@ class SetExpensesViewController: UITableViewController {
         
         cell.textLabel?.text = SharedData.peopleList()[indexPath.row].name
         
-        if(SharedData.peopleCount() != 0){
-            let thisExpense : Double = (allExpenses.thisExpense(SharedData.selectedExpense!, numbers: SharedData.peopleCount()))
+        var num = SharedData.peopleCount() - self.sub
         
-            cell.detailTextLabel?.text = String(format: "+%.2f", thisExpense)
+        if(!(cell.SwitchExpense.on)){
+            num = 0
         }
+        
+        self.refresh(cell, count: num)
         
         return cell
     }
